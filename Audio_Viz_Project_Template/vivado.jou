@@ -2,25 +2,74 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Mar 14 16:42:26 2019
-# Process ID: 6604
-# Current directory: C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9976 C:\Users\patwa\Downloads\Folder_SLFiles\Audio_Viz_Project_Template.xpr\Audio_Viz_Project_Template\Audio_Viz_Project_Template.xpr
-# Log file: C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/vivado.log
-# Journal file: C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template\vivado.jou
+# Start of session at: Thu Mar 28 15:27:17 2019
+# Process ID: 15244
+# Current directory: C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13092 C:\Users\patwa\Desktop\EE2026_Project\Audio_Viz_Project_Template\Audio_Viz_Project_Template.xpr
+# Log file: C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/vivado.log
+# Journal file: C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr
+open_project C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
-set_property PROGRAM.FILE {C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-archive_project C:/Users/patwa/Downloads/RAGHAV.xpr.zip -temp_dir C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/.Xil/Vivado-6604-DESKTOP-1TO822B -force -include_local_ip_cache -include_config_settings
-archive_project C:/Users/patwa/Desktop/TEMP_RAGHAV/RAGHAV.xpr.zip -temp_dir C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/.Xil/Vivado-6604-DESKTOP-1TO822B -force -include_local_ip_cache -include_config_settings
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

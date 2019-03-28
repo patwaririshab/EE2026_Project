@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -70,11 +69,11 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.cache/wt [current_project]
-  set_property parent.project_path C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.cache/wt [current_project]
+  set_property parent.project_path C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr [current_project]
   set_property ip_cache_permissions disable [current_project]
-  add_files -quiet C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp
-  read_xdc C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc
+  add_files -quiet C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp
+  read_xdc C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc
   link_design -top Voice_Scope_TOP -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

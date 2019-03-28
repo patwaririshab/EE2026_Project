@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/patwa/Downloads/Folder_SLFiles/Audio_Viz_Project_Template.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc rfile:../../../Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc rfile:../../../Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]

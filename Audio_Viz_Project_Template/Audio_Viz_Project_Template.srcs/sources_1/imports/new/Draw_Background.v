@@ -30,18 +30,17 @@ module Draw_Background(
     );
     
 // The code below draws two grid lines. Modify the codes to draw more grid lines. 
-    wire Condition_For_Grid = (VGA_HORZ_COORD == 800) ||  (VGA_VERT_COORD == 250) ;
+    wire Condition_For_Grid = (VGA_HORZ_COORD % 80 == 0) ||  (VGA_VERT_COORD % 64 == 0) ;
 
 
 // Using the gridline example, insert your code below to draw ticks on the x-axis and y-axis.
-    wire Condition_For_Ticks;
-
-
+    wire Condition_For_Ticks = ((VGA_HORZ_COORD % 10 == 0) && ((VGA_VERT_COORD < 518) && (VGA_VERT_COORD > 506))) ||
+        ((VGA_VERT_COORD % 8 == 0) && ((VGA_HORZ_COORD < 646) && (VGA_HORZ_COORD > 634)));
     
 // Please modify below codes to change the background color and to display ticks defined above
-    assign VGA_Red_Grid = Condition_For_Grid ? 4'h0 : 4'h0 ;
-    assign VGA_Green_Grid = Condition_For_Grid ? 4'hD : 4'h0 ;
-    assign VGA_Blue_Grid = Condition_For_Grid ? 4'h0 : 4'h0 ;
+    assign VGA_Red_Grid = (Condition_For_Ticks ? 4'hF : (Condition_For_Grid ? 4'h0 : 4'h0));
+    assign VGA_Green_Grid = (Condition_For_Ticks ? 4'hF : (Condition_For_Grid ? 4'hD : 4'h0));
+    assign VGA_Blue_Grid = (Condition_For_Ticks ? 4'hF : (Condition_For_Grid ? 4'h0 : 4'h0));
                             // if true, a red pixel is put at coordinates (VGA_HORZ_COORD, VGA_VERT_COORD), 
      
 endmodule
