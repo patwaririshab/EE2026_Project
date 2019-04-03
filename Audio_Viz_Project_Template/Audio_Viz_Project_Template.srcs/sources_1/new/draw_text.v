@@ -33,7 +33,9 @@ module draw_text(
     
     input middle_button_out,
     input [11:0] cur_theme_wave,
-    input [11:0] cur_theme_background
+    input [11:0] cur_theme_background,
+    
+    input [1:0] mode
     );
     
     wire open_option_condition;
@@ -41,8 +43,10 @@ module draw_text(
     wire final_condition;
     reg options_toggle = 0;
     always @ (posedge button_clock) begin
-        if (middle_button_out == 1) begin
-            options_toggle = options_toggle + 1;
+        if (mode == 0) begin
+            if (middle_button_out == 1) begin
+                options_toggle = options_toggle + 1;
+            end
         end
     end
     

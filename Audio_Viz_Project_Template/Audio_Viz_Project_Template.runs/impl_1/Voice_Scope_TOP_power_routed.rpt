@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Apr  3 06:05:02 2019
+| Date             : Wed Apr  3 18:13:36 2019
 | Host             : RaghavDesktop running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.232        |
+| Total On-Chip Power (W)  | 0.233        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.160        |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.004 |        5 |       --- |             --- |
-| Slice Logic              |     0.006 |     1953 |       --- |             --- |
-|   LUT as Logic           |     0.005 |      902 |     20800 |            4.34 |
+| Slice Logic              |     0.006 |     2027 |       --- |             --- |
+|   LUT as Logic           |     0.005 |      928 |     20800 |            4.46 |
 |   LUT as Distributed RAM |    <0.001 |      280 |      9600 |            2.92 |
 |   CARRY4                 |    <0.001 |      193 |      8150 |            2.37 |
-|   Register               |    <0.001 |      283 |     41600 |            0.68 |
+|   Register               |    <0.001 |      326 |     41600 |            0.78 |
 |   F7/F8 Muxes            |    <0.001 |       20 |     32600 |            0.06 |
 |   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
-|   Others                 |     0.000 |       86 |       --- |             --- |
-| Signals                  |     0.011 |     1351 |       --- |             --- |
+|   Others                 |     0.000 |       83 |       --- |             --- |
+| Signals                  |     0.011 |     1406 |       --- |             --- |
 | Block RAM                |     0.013 |        3 |        50 |            6.00 |
 | MMCM                     |     0.123 |        1 |         5 |           20.00 |
-| I/O                      |     0.003 |       53 |       106 |           50.00 |
+| I/O                      |     0.004 |       53 |       106 |           50.00 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.232 |          |           |                 |
+| Total                    |     0.233 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -132,8 +132,8 @@ Table of Contents
 +--------------------+-------------------------------------------------+-----------------+
 | Clock              | Domain                                          | Constraint (ns) |
 +--------------------+-------------------------------------------------+-----------------+
-| clk_out1_clk_wiz_0 | nolabel_line133/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
-| clkfbout_clk_wiz_0 | nolabel_line133/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
+| clk_out1_clk_wiz_0 | nolabel_line135/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
+| clkfbout_clk_wiz_0 | nolabel_line135/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
 | sys_clk_pin        | CLK                                             |            10.0 |
 +--------------------+-------------------------------------------------+-----------------+
 
@@ -148,7 +148,6 @@ Table of Contents
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
 | Voice_Scope_TOP                     |     0.160 |
-|   db1                               |    <0.001 |
 |   dbut                              |    <0.001 |
 |     dff_1                           |    <0.001 |
 |     dff_2                           |    <0.001 |
@@ -158,12 +157,12 @@ Table of Contents
 |     modes                           |     0.002 |
 |       FontRom                       |     0.002 |
 |     open_option                     |     0.006 |
-|       FontRom                       |     0.005 |
+|       FontRom                       |     0.006 |
 |     options                         |    <0.001 |
-|     sw0                             |     0.002 |
+|     sw0                             |     0.003 |
 |       FontRom                       |     0.002 |
 |     sw1                             |    <0.001 |
-|     sw14                            |     0.003 |
+|     sw14                            |     0.002 |
 |       FontRom                       |     0.002 |
 |     sw15                            |    <0.001 |
 |     sw2                             |     0.002 |
@@ -251,7 +250,7 @@ Table of Contents
 |     Sample_Memory_reg_960_1023_6_8  |    <0.001 |
 |     Sample_Memory_reg_960_1023_9_9  |    <0.001 |
 |   gbc                               |    <0.001 |
-|   grt                               |     0.003 |
+|   grt                               |     0.004 |
 |     record_ins                      |     0.003 |
 |       FontRom                       |     0.003 |
 |     record_status                   |    <0.001 |
@@ -263,7 +262,7 @@ Table of Contents
 |     dff_2                           |    <0.001 |
 |   mc                                |    <0.001 |
 |   my_20khz                          |    <0.001 |
-|   nolabel_line133                   |     0.131 |
+|   nolabel_line135                   |     0.131 |
 |     VGA_CLK_108M                    |     0.124 |
 |     VGA_CONTROL                     |     0.007 |
 |   rbut                              |    <0.001 |

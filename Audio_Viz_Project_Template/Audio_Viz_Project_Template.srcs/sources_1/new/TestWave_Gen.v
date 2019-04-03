@@ -29,9 +29,11 @@ module TestWave_Gen(
     );
     
     always @ (posedge wave_clock) begin
-        if (pause_switch == 0 && mode == 0) begin
-            if (counter == 640) counter = 0;
-            counter = counter + 1; 
+        if (mode == 0) begin
+            if (pause_switch == 0) begin
+                if (counter == 640) counter = 0;
+                counter = counter + 1; 
+            end
         end
     end
 endmodule

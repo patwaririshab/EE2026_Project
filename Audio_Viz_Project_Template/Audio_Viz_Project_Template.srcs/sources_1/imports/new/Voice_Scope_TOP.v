@@ -66,6 +66,9 @@ module Voice_Scope_TOP(
     single_pulse ubut (button_clock, up_button, up_button_out);
     single_pulse dbut (button_clock, down_button, down_button_out);
     
+    // Changes mode
+    wire [1:0] mode;
+    mode_changer mc (button_clock, up_button_out, down_button_out, mode);
     // Changing theme
     wire [11:0] cur_theme_wave;
     wire [11:0] cur_theme_axes;
@@ -73,10 +76,9 @@ module Voice_Scope_TOP(
     wire [11:0] cur_theme_tick;
     wire [11:0] cur_theme_background;
     theme_selector ts (button_clock, left_button_out, right_button_out, cur_theme_wave, cur_theme_axes,
-        cur_theme_grid, cur_theme_tick, cur_theme_background);
-    // Changes mode
-    wire [1:0] mode;
-    mode_changer mc (button_clock, up_button_out, down_button_out, mode);
+        cur_theme_grid, cur_theme_tick, cur_theme_background, mode);
+    
+    
     
     // Generates test waveform 
     wire [9:0] wave_sample; 
@@ -109,7 +111,7 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_blue_text;
     draw_text dt1 (CLK_VGA, button_clock, VGA_red_text, VGA_green_text, VGA_blue_text,
         VGA_HORZ_COORD, VGA_VERT_COORD, middle_button_out,
-        cur_theme_wave, cur_theme_background);
+        cur_theme_wave, cur_theme_background, mode);
     
     /* MODE 2 - GAME */
     wire [3:0] VGA_game_red_back;
@@ -122,7 +124,7 @@ module Voice_Scope_TOP(
     wire [3:0] VGA_game_green_text;
     wire [3:0] VGA_game_blue_text;
     game_record_text grt (CLK_VGA, button_clock, VGA_HORZ_COORD, VGA_VERT_COORD,
-        VGA_game_red_text, VGA_game_green_text, VGA_game_blue_text, middle_button_out);
+        VGA_game_red_text, VGA_game_green_text, VGA_game_blue_text, middle_button_out, mode);
     // Module with background including HP bar, ball, 
     // Module with waveform being drawn to show recording being done
     // Module with volume indicator to show how high you can jump

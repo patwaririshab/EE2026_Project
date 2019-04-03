@@ -31,7 +31,8 @@ module game_record_text(
     output [3:0] VGA_game_green_text,
     output [3:0] VGA_game_blue_text, 
     
-    input middle_button_out
+    input middle_button_out,
+    input [1:0] mode
     );
     
     reg [11:0] recorded_wave [1279:0];
@@ -41,12 +42,14 @@ module game_record_text(
     wire recording_status_text;
     reg recording = 0;
     always @ (posedge button_clock) begin
-        if (middle_button_out == 1) begin
-            recording = recording + 1;
-        end
-        
-        if (recording == 1) begin
-            // Code to record data into array stored here.
+        if (mode == 1) begin
+            if (middle_button_out == 1) begin
+                recording = recording + 1;
+            end
+            
+            if (recording == 1) begin
+                // Code to record data into array stored here.
+            end
         end
     end
     

@@ -1,0 +1,394 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 6360
+License: Customer
+
+Current time: 	Wed Apr 03 16:50:26 SGT 2019
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1966x1106
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 322 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Raghav Bhardwaj
+User home directory: C:/Users/Raghav Bhardwaj
+User working directory: D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Raghav Bhardwaj/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Raghav Bhardwaj/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Raghav Bhardwaj/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/vivado.log
+Vivado journal file location: 	D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/vivado.jou
+Engine tmp dir: 	D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/.Xil/Vivado-6360-RaghavDesktop
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	211 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 567 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: D:\Raghav Stuff\Google Drive\Work\NUS\Sem 2\EE2026\Labs\EE2026_Project\Audio_Viz_Project_Template\Audio_Viz_Project_Template.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 88 MB (+89709kb) [00:00:06]
+// [Engine Memory]: 535 MB (+409029kb) [00:00:06]
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template' 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 122 MB (+31027kb) [00:00:08]
+// [Engine Memory]: 627 MB (+68593kb) [00:00:08]
+// [GUI Memory]: 137 MB (+9813kb) [00:00:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 661 MB. GUI used memory: 44 MB. Current time: 4/3/19 4:50:29 PM SGT
+// [Engine Memory]: 677 MB (+19905kb) [00:00:11]
+// Tcl Message: open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 922.852 ; gain = 170.672 
+// Project name: Audio_Viz_Project_Template; location: D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 679 MB. GUI used memory: 44 MB. Current time: 4/3/19 5:20:33 PM SGT
+// Elapsed time: 2664 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// HMemoryUtils.trashcanNow. Engine heap size: 701 MB. GUI used memory: 47 MB. Current time: 4/3/19 5:34:59 PM SGT
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713888A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,300 MB (+617891kb) [00:44:47]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,353 MB. GUI used memory: 47 MB. Current time: 4/3/19 5:35:19 PM SGT
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 97 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wrapper(Behavioral) (wrapper.vhd)]", 2); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), gbc : generate_button_clock (clock_divider.v)]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), vi : Volume_Indicator (Volume_Indicator.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dt1 : draw_text (draw_text.v)]", 16, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dt1 : draw_text (draw_text.v), sw14 : Pixel_On_Text2(Behavioral) (Pixel_On_Text2.vhd)]", 23, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dt1 : draw_text (draw_text.v)]", 16); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dgb : draw_game_background (draw_game_background.v)]", 17, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grt : game_record_text (game_record_text.v)]", 18, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), grt : game_record_text (game_record_text.v)]", 18, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 53 seconds
+selectCodeEditor("game_record_text.v", 221, 304); // ce (w, ck)
+selectCodeEditor("game_record_text.v", 222, 312); // ce (w, ck)
+selectCodeEditor("game_record_text.v", 300, 342); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("game_record_text.v", 239, 401); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectCodeEditor("game_record_text.v", 104, 514); // ce (w, ck)
+selectCodeEditor("game_record_text.v", 93, 469); // ce (w, ck)
+selectCodeEditor("game_record_text.v", 431, 292); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_text.v", 1); // k (j, ck)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 12 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 598, 399); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 562, 327); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Voice_Scope_TOP.v", 312, 237); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 307, 236); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 276, 242); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_text.v", 1); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_text.v", 1); // k (j, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("draw_text.v", 292, 235); // ce (w, ck)
+selectCodeEditor("draw_text.v", 369, 282); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,358 MB. GUI used memory: 49 MB. Current time: 4/3/19 6:05:19 PM SGT
+// Elapsed time: 1651 seconds
+selectCodeEditor("draw_text.v", 57, 407); // ce (w, ck)
+selectCodeEditor("draw_text.v", 104, 452); // ce (w, ck)
+selectCodeEditor("draw_text.v", 104, 452); // ce (w, ck)
+selectCodeEditor("draw_text.v", 309, 383); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("draw_text.v", 308, 272); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("draw_text.v", 375, 242); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 3); // k (j, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 191, 326); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("Voice_Scope_TOP.v", 535, 282); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 42, 94); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 54, 136); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,396 MB. GUI used memory: 48 MB. Current time: 4/3/19 6:09:19 PM SGT
+selectCodeEditor("Voice_Scope_TOP.v", 54, 134); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 151, 283); // ce (w, ck)
+// [Engine Memory]: 1,396 MB (+32629kb) [01:19:02]
+selectCodeEditor("Voice_Scope_TOP.v", 39, 101); // ce (w, ck)
+typeControlKey((HResource) null, "Voice_Scope_TOP.v", 'v'); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 419, 285); // ce (w, ck)
+selectCodeEditor("Voice_Scope_TOP.v", 377, 175); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v)]", 1); // B (D, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), ts : theme_selector (theme_selector.v)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), ts : theme_selector (theme_selector.v)]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("theme_selector.v", 348, 418); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 348, 418); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("theme_selector.v", 56, 143); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 56, 112); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 111, 409); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 224, 239); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 58, 181); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 330, 467); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 326, 467); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 70, 495); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 61, 489); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 264, 340); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 171, 483); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("theme_selector.v", 61, 467); // ce (w, ck)
+selectCodeEditor("theme_selector.v", 56, 467); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("theme_selector.v", 85, 230); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("theme_selector.v", 404, 255); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("theme_selector.v", 509, 112); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Voice_Scope_TOP.v", 3); // k (j, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), tvg : TestWave_Gen (TestWave_Gen.v)]", 13, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), tvg : TestWave_Gen (TestWave_Gen.v)]", 13, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("TestWave_Gen.v", 57, 423); // ce (w, ck)
+selectCodeEditor("TestWave_Gen.v", 57, 439); // ce (w, ck)
+selectCodeEditor("TestWave_Gen.v", 85, 452); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("TestWave_Gen.v", 247, 344); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("TestWave_Gen.v", 164, 470); // ce (w, ck)
+selectCodeEditor("TestWave_Gen.v", 82, 427); // ce (w, ck)
+selectCodeEditor("TestWave_Gen.v", 323, 399); // ce (w, ck)
+selectCodeEditor("TestWave_Gen.v", 304, 240); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("TestWave_Gen.v", 463, 166); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Wed Apr  3 18:11:34 2019] Launched synth_1... Run output will be captured here: D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log [Wed Apr  3 18:11:34 2019] Launched impl_1... Run output will be captured here: D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log 
+// Elapsed time: 32 seconds
+selectCodeEditor("TestWave_Gen.v", 326, 157); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 270ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 105 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectCodeEditor("TestWave_Gen.v", 214, 205); // ce (w, ck)
+selectCodeEditor("TestWave_Gen.v", 214, 205); // ce (w, ck)
+// Elapsed time: 1149 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dgb : draw_game_background (draw_game_background.v)]", 17, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dgb : draw_game_background (draw_game_background.v)]", 17, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dw1 : Draw_Waveform (Draw_Waveform.v)]", 14, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), dw1 : Draw_Waveform (Draw_Waveform.v)]", 14, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("Draw_Waveform.v", 75, 295); // ce (w, ck)
+// Elapsed time: 358 seconds
+selectCodeEditor("Draw_Waveform.v", 184, 282); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_game_background.v", 6); // k (j, ck)
+selectCodeEditor("draw_game_background.v", 27, 310); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 545, 394); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,396 MB. GUI used memory: 52 MB. Current time: 4/3/19 6:39:19 PM SGT
+selectCodeEditor("draw_game_background.v", 386, 328); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 65, 341); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 26, 350); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 634, 401); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 617, 405); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 400, 399); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 87, 454); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 407, 486); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), VGA_DISPLAY : VGA_DISPLAY (VGA_DISPLAY.v)]", 21, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Voice_Scope_TOP (Voice_Scope_TOP.v), VGA_DISPLAY : VGA_DISPLAY (VGA_DISPLAY.v)]", 21, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 12 seconds
+selectCodeEditor("VGA_DISPLAY.v", 548, 281); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 628, 279); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("VGA_DISPLAY.v", 72, 298); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 367, 291); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 358, 295); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 75, 305); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 72, 302); // ce (w, ck)
+selectCodeEditor("VGA_DISPLAY.v", 353, 297); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_game_background.v", 6); // k (j, ck)
+selectCodeEditor("draw_game_background.v", 74, 280); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 29, 141); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 28, 144, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("draw_game_background.v", 158, 276); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 139, 282); // ce (w, ck)
+selectCodeEditor("draw_game_background.v", 27, 147); // ce (w, ck)

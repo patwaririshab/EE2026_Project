@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14024 
+INFO: Helper process launched with PID 9236 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.582 ; gain = 100.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.672 ; gain = 99.672
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Voice_Scope_TOP' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v:10]
 INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v:23]
@@ -34,21 +34,11 @@ INFO: [Synth 8-6157] synthesizing module 'single_pulse' [D:/Raghav Stuff/Google 
 INFO: [Synth 8-6157] synthesizing module 'd_flip_flop' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/d_flip_flop.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop' (6#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/d_flip_flop.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'single_pulse' (7#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/single_pulse.v:23]
-INFO: [Synth 8-6157] synthesizing module 'theme_selector' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:48]
-INFO: [Synth 8-4471] merging register 'cur_theme_reg[0][11:0]' into 'cur_theme_wave_reg[11:0]' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-INFO: [Synth 8-4471] merging register 'cur_theme_reg[1][11:0]' into 'cur_theme_axes_reg[11:0]' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-INFO: [Synth 8-4471] merging register 'cur_theme_reg[2][11:0]' into 'cur_theme_grid_reg[11:0]' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-INFO: [Synth 8-4471] merging register 'cur_theme_reg[3][11:0]' into 'cur_theme_tick_reg[11:0]' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-INFO: [Synth 8-4471] merging register 'cur_theme_reg[4][11:0]' into 'cur_theme_background_reg[11:0]' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cur_theme_reg[0] was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cur_theme_reg[1] was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cur_theme_reg[2] was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cur_theme_reg[3] was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cur_theme_reg[4] was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'theme_selector' (8#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:23]
 INFO: [Synth 8-6157] synthesizing module 'mode_changer' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/mode_changer.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'mode_changer' (9#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/mode_changer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mode_changer' (8#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/mode_changer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'theme_selector' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'theme_selector' (9#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:23]
 INFO: [Synth 8-6157] synthesizing module 'TestWave_Gen' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'TestWave_Gen' (10#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Draw_Waveform' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v:6]
@@ -64,72 +54,72 @@ WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:57]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:58]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:61]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:62]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized0' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: Press middle button to close options - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized0' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized0' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:66]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized0' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:67]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized0' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:70]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized0' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:71]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized1' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - sw0 toggles waveform - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized1' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized1' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:74]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized1' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:75]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized1' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:78]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized1' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:79]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - sw1 toggles grid - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized2' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:82]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:83]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:86]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized2' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:87]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized3' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - sw2 toggles axes - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized3' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized3' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:90]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized3' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:91]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized3' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:94]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized3' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:95]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized4' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - sw3 toggles ticks - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized4' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized4' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:98]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized4' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:99]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized4' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:102]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized4' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:103]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized5' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - sw14 pauses mic recording - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized5' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized5' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:106]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized5' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:107]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized5' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:110]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized5' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:111]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized6' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - sw15 toggles to test waveform - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized6' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized6' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:114]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized6' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:115]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized6' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:118]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized6' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:119]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized7' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: - Use up and down buttons to change mode - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized7' (14#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized7' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:122]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized7' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:123]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized7' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:126]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized7' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:127]
 INFO: [Synth 8-6155] done synthesizing module 'draw_text' (15#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_game_background' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_game_background.v:23]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized8' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
@@ -148,16 +138,16 @@ WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized9' (16#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized9' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:59]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized9' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:60]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized9' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:62]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized9' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:63]
 INFO: [Synth 8-638] synthesizing module 'Pixel_On_Text2__parameterized10' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
 	Parameter displayText bound to: Recording... - type: string 
 WARNING: [Synth 8-6014] Unused sequential element inXRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:80]
 WARNING: [Synth 8-6014] Unused sequential element inYRange_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:81]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'Pixel_On_Text2__parameterized10' (16#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:47]
-WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized10' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:67]
-WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized10' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:68]
+WARNING: [Synth 8-689] width (12) of port connection 'horzCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized10' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:70]
+WARNING: [Synth 8-689] width (12) of port connection 'vertCoord' does not match port width (32) of module 'Pixel_On_Text2__parameterized10' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:71]
 INFO: [Synth 8-6155] done synthesizing module 'game_record_text' (17#1) [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v:23]
 INFO: [Synth 8-6157] synthesizing module 'VGA_DISPLAY' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v:17]
 INFO: [Synth 8-638] synthesizing module 'CLK_108M' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd:83]
@@ -230,7 +220,7 @@ WARNING: [Synth 8-3331] design TestWave_Gen has unconnected port sound_sample[2]
 WARNING: [Synth 8-3331] design TestWave_Gen has unconnected port sound_sample[1]
 WARNING: [Synth 8-3331] design TestWave_Gen has unconnected port sound_sample[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 417.484 ; gain = 161.008
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 417.895 ; gain = 160.895
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -243,10 +233,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 417.484 ; gain = 161.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 417.895 ; gain = 160.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 417.484 ; gain = 161.008
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 417.895 ; gain = 160.895
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -265,26 +255,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 763.793 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 763.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 763.793 ; gain = 507.316
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 763.445 ; gain = 506.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 763.793 ; gain = 507.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 763.445 ; gain = 506.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 763.793 ; gain = 507.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 763.445 ; gain = 506.445
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "clk_20k0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'cur_theme_grid_reg[11:0]' into 'cur_theme_axes_reg[11:0]' [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cur_theme_grid_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v:51]
+INFO: [Synth 8-5544] ROM "cur_theme" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cur_theme_wave" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element fontRow_reg was removed.  [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Font_Rom.vhd:2233]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
@@ -298,7 +288,7 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd:60]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 763.793 ; gain = 507.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 763.445 ; gain = 506.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -328,7 +318,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit       Adders := 3     
 +---Registers : 
 	               13 Bit    Registers := 1     
-	               12 Bit    Registers := 8     
+	               12 Bit    Registers := 14    
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 15    
@@ -344,7 +334,7 @@ Detailed RTL Component Info :
 	   2 Input     31 Bit        Muxes := 12    
 	   2 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 3     
-	   6 Input     12 Bit        Muxes := 4     
+	   6 Input     12 Bit        Muxes := 10    
 	   2 Input     11 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 1     
@@ -362,8 +352,7 @@ Detailed RTL Component Info :
 	  14 Input      2 Bit        Muxes := 1     
 	  13 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -431,18 +420,6 @@ Module d_flip_flop
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
-Module theme_selector 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               12 Bit    Registers := 4     
-	                3 Bit    Registers := 1     
-+---Muxes : 
-	   6 Input     12 Bit        Muxes := 4     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 1     
 Module mode_changer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -451,12 +428,26 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      2 Bit        Muxes := 3     
+Module theme_selector 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 10    
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     12 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module TestWave_Gen 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
 	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module Draw_Waveform 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -624,7 +615,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module Pixel_On_Text2__parameterized8 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -684,6 +675,8 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
 	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module VGA_CONTROL 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -745,47 +738,77 @@ INFO: [Synth 8-3886] merging instance 'vi/ssd/status2_reg[3]' (FDSE) to 'vi/ssd/
 INFO: [Synth 8-3886] merging instance 'vi/ssd/status2_reg[4]' (FDSE) to 'vi/ssd/status2_reg[5]'
 INFO: [Synth 8-3886] merging instance 'vi/ssd/status2_reg[5]' (FDSE) to 'vi/ssd/status2_reg[6]'
 INFO: [Synth 8-3886] merging instance 'vi/ssd/status2_reg[6]' (FDSE) to 'vi/ssd/status2_reg[7]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\vi/ssd/status1_reg[7] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\vi/ssd/status2_reg[7] )
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[8]' (FDE) to 'ts/cur_theme_tick_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[8]' (FDE) to 'ts/cur_theme_wave_reg[6]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_background_reg[8]' (FDE) to 'ts/cur_theme_background_reg[10]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[9]' (FDE) to 'ts/cur_theme_tick_reg[11]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_axes_reg[9]' (FDE) to 'ts/cur_theme_background_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[9]' (FDE) to 'ts/cur_theme_wave_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[10]' (FDE) to 'ts/cur_theme_tick_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[10]' (FDE) to 'ts/cur_theme_tick_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[11]' (FDE) to 'ts/cur_theme_wave_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_background_reg[11]' (FDE) to 'ts/cur_theme_background_reg[7]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[4]' (FDE) to 'ts/cur_theme_tick_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[5]' (FDE) to 'ts/cur_theme_tick_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[5]' (FDE) to 'ts/cur_theme_tick_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_background_reg[5]' (FDE) to 'ts/cur_theme_background_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[6]' (FDE) to 'ts/cur_theme_tick_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_background_reg[6]' (FDE) to 'ts/cur_theme_background_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[7]' (FDE) to 'ts/cur_theme_tick_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_axes_reg[0]' (FDE) to 'ts/cur_theme_axes_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[0]' (FDE) to 'ts/cur_theme_tick_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[1]' (FDE) to 'ts/cur_theme_tick_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[2]' (FDE) to 'ts/cur_theme_tick_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_wave_reg[2]' (FDE) to 'ts/cur_theme_tick_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vi/\ssd/status1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vi/\ssd/status2_reg[7] )
 INFO: [Synth 8-3886] merging instance 'vi/ssd/an_reg[2]' (FDS) to 'vi/ssd/an_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\vi/ssd/an_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\vi/ssd/seg_reg[7] )
-WARNING: [Synth 8-3332] Sequential element (vi/ssd/an_reg[3]) is unused and will be removed from module Voice_Scope_TOP.
-WARNING: [Synth 8-3332] Sequential element (vi/ssd/status2_reg[7]) is unused and will be removed from module Voice_Scope_TOP.
-WARNING: [Synth 8-3332] Sequential element (vi/ssd/status1_reg[7]) is unused and will be removed from module Voice_Scope_TOP.
-WARNING: [Synth 8-3332] Sequential element (vi/ssd/seg_reg[7]) is unused and will be removed from module Voice_Scope_TOP.
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_axes_reg[8]' (FDE) to 'ts/cur_theme_background_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_background_reg[10]' (FDE) to 'ts/cur_theme_axes_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[11]' (FDE) to 'ts/cur_theme_wave_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_axes_reg[11]' (FDE) to 'ts/cur_theme_background_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_background_reg[7]' (FDE) to 'ts/cur_theme_axes_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ts/cur_theme_tick_reg[1]' (FDE) to 'ts/cur_theme_wave_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mc/mode_reg[1] )
-WARNING: [Synth 8-3332] Sequential element (mc/mode_reg[1]) is unused and will be removed from module Voice_Scope_TOP.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vi/\ssd/an_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vi/\ssd/seg_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (ssd/an_reg[3]) is unused and will be removed from module Volume_Indicator.
+WARNING: [Synth 8-3332] Sequential element (ssd/status2_reg[7]) is unused and will be removed from module Volume_Indicator.
+WARNING: [Synth 8-3332] Sequential element (ssd/status1_reg[7]) is unused and will be removed from module Volume_Indicator.
+WARNING: [Synth 8-3332] Sequential element (ssd/seg_reg[7]) is unused and will be removed from module Volume_Indicator.
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][8]' (FDE) to 'ts/cur_theme_tick_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][8]' (FDE) to 'ts/cur_theme_axes_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][8]' (FDE) to 'ts/cur_theme_grid_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][8]' (FDE) to 'ts/cur_theme_wave_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][8]' (FDE) to 'ts/cur_theme_background_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][9]' (FDE) to 'ts/cur_theme_tick_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][9]' (FDE) to 'ts/cur_theme_axes_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][9]' (FDE) to 'ts/cur_theme_grid_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][9]' (FDE) to 'ts/cur_theme_wave_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][9]' (FDE) to 'ts/cur_theme_background_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][10]' (FDE) to 'ts/cur_theme_tick_reg[10]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][10]' (FDE) to 'ts/cur_theme_axes_reg[10]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][10]' (FDE) to 'ts/cur_theme_grid_reg[10]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][10]' (FDE) to 'ts/cur_theme_wave_reg[10]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][10]' (FDE) to 'ts/cur_theme_background_reg[10]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][11]' (FDE) to 'ts/cur_theme_tick_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][11]' (FDE) to 'ts/cur_theme_axes_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][11]' (FDE) to 'ts/cur_theme_grid_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][11]' (FDE) to 'ts/cur_theme_wave_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][11]' (FDE) to 'ts/cur_theme_background_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][4]' (FDE) to 'ts/cur_theme_tick_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][4]' (FDE) to 'ts/cur_theme_axes_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][4]' (FDE) to 'ts/cur_theme_grid_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][4]' (FDE) to 'ts/cur_theme_wave_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][4]' (FDE) to 'ts/cur_theme_background_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][5]' (FDE) to 'ts/cur_theme_tick_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][5]' (FDE) to 'ts/cur_theme_axes_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][5]' (FDE) to 'ts/cur_theme_grid_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][5]' (FDE) to 'ts/cur_theme_wave_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][5]' (FDE) to 'ts/cur_theme_background_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][6]' (FDE) to 'ts/cur_theme_tick_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][6]' (FDE) to 'ts/cur_theme_axes_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][6]' (FDE) to 'ts/cur_theme_grid_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][6]' (FDE) to 'ts/cur_theme_wave_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][6]' (FDE) to 'ts/cur_theme_background_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][7]' (FDE) to 'ts/cur_theme_tick_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][7]' (FDE) to 'ts/cur_theme_axes_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][7]' (FDE) to 'ts/cur_theme_grid_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][7]' (FDE) to 'ts/cur_theme_wave_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][7]' (FDE) to 'ts/cur_theme_background_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][0]' (FDE) to 'ts/cur_theme_tick_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][0]' (FDE) to 'ts/cur_theme_axes_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][0]' (FDE) to 'ts/cur_theme_grid_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][0]' (FDE) to 'ts/cur_theme_wave_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][0]' (FDE) to 'ts/cur_theme_background_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][1]' (FDE) to 'ts/cur_theme_tick_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][1]' (FDE) to 'ts/cur_theme_axes_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][1]' (FDE) to 'ts/cur_theme_grid_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][1]' (FDE) to 'ts/cur_theme_wave_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][1]' (FDE) to 'ts/cur_theme_background_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][2]' (FDE) to 'ts/cur_theme_tick_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][2]' (FDE) to 'ts/cur_theme_axes_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][2]' (FDE) to 'ts/cur_theme_grid_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][2]' (FDE) to 'ts/cur_theme_wave_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][2]' (FDE) to 'ts/cur_theme_background_reg[2]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[3][3]' (FDE) to 'ts/cur_theme_tick_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[1][3]' (FDE) to 'ts/cur_theme_axes_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[2][3]' (FDE) to 'ts/cur_theme_grid_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[0][3]' (FDE) to 'ts/cur_theme_wave_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ts/cur_theme_reg[4][3]' (FDE) to 'ts/cur_theme_background_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 763.793 ; gain = 507.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 763.445 ; gain = 506.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -816,9 +839,9 @@ ROM:
 |draw_text            | sw1/FontRom/fontRow_reg           | 2048x8        | Block RAM      | 
 |draw_text            | sw2/displayText[1]                | 32x7          | LUT            | 
 |draw_text            | sw2/FontRom/fontRow_reg           | 2048x8        | Block RAM      | 
-|draw_text            | sw3/displayText[1]                | 32x7          | LUT            | 
 |draw_text            | sw3/FontRom/fontRow_reg           | 2048x8        | Block RAM      | 
 |draw_text            | sw14/displayText[1]               | 32x7          | LUT            | 
+|draw_text            | sw14/FontRom/fontRow_reg          | 2048x8        | Block RAM      | 
 |draw_text            | sw15/displayText[1]               | 32x7          | LUT            | 
 |draw_text            | sw15/FontRom/fontRow_reg          | 2048x8        | Block RAM      | 
 |draw_text            | modes/displayText[1]              | 64x7          | LUT            | 
@@ -831,28 +854,28 @@ ROM:
 
 
 Distributed RAM: Preliminary Mapping  Report (see note below)
-+----------------+-----------------------+-----------+----------------------+------------------------------+
-|Module Name     | RTL Object            | Inference | Size (Depth x Width) | Primitives                   | 
-+----------------+-----------------------+-----------+----------------------+------------------------------+
-|Voice_Scope_TOP | dw1/Sample_Memory_reg | Implied   | 2 K x 10             | RAM64X1D x 20  RAM64M x 60   | 
-+----------------+-----------------------+-----------+----------------------+------------------------------+
++------------+-------------------+-----------+----------------------+------------------------------+
+|Module Name | RTL Object        | Inference | Size (Depth x Width) | Primitives                   | 
++------------+-------------------+-----------+----------------------+------------------------------+
+|dw1         | Sample_Memory_reg | Implied   | 2 K x 10             | RAM64X1D x 20  RAM64M x 60   | 
++------------+-------------------+-----------+----------------------+------------------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4480] The timing for the instance i_21/dt1/open_option/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_22/dt1/options/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_23/dt1/sw0/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_24/dt1/sw1/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_25/dt1/sw2/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_26/dt1/sw3/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_27/dt1/sw14/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_28/dt1/sw15/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_29/dt1/modes/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_40/dgb/record_ins/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_42/grt/record_ins/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance i_43/grt/record_status/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_0/open_option/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_1/options/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_2/sw0/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_3/sw1/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_4/sw2/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_5/sw3/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_6/sw14/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_7/sw15/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dt1/i_8/modes/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance dgb/i_0/record_ins/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance grt/i_0/record_ins/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance grt/i_1/record_status/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -863,24 +886,24 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 765.570 ; gain = 509.094
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 769.668 ; gain = 512.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 825.598 ; gain = 569.121
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 813.344 ; gain = 556.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping  Report
-+----------------+-----------------------+-----------+----------------------+------------------------------+
-|Module Name     | RTL Object            | Inference | Size (Depth x Width) | Primitives                   | 
-+----------------+-----------------------+-----------+----------------------+------------------------------+
-|Voice_Scope_TOP | dw1/Sample_Memory_reg | Implied   | 2 K x 10             | RAM64X1D x 20  RAM64M x 60   | 
-+----------------+-----------------------+-----------+----------------------+------------------------------+
++------------+-------------------+-----------+----------------------+------------------------------+
+|Module Name | RTL Object        | Inference | Size (Depth x Width) | Primitives                   | 
++------------+-------------------+-----------+----------------------+------------------------------+
+|dw1         | Sample_Memory_reg | Implied   | 2 K x 10             | RAM64X1D x 20  RAM64M x 60   | 
++------------+-------------------+-----------+----------------------+------------------------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -894,6 +917,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mc/mode_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (mc/mode_reg[1]) is unused and will be removed from module Voice_Scope_TOP.
 INFO: [Synth 8-4480] The timing for the instance dt1/open_option/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance dt1/open_option/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance dt1/sw0/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -907,7 +932,7 @@ INFO: [Synth 8-4480] The timing for the instance dt1/modes/FontRom/fontRow_reg (
 INFO: [Synth 8-4480] The timing for the instance grt/record_ins/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance grt/record_ins/FontRom/fontRow_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -931,7 +956,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -944,7 +969,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -956,25 +981,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -992,19 +1017,19 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BUFG       |     6|
 |2     |CARRY4     |   193|
-|3     |LUT1       |   203|
-|4     |LUT2       |   319|
-|5     |LUT3       |    70|
-|6     |LUT4       |    92|
-|7     |LUT5       |   115|
-|8     |LUT6       |   289|
+|3     |LUT1       |   202|
+|4     |LUT2       |   302|
+|5     |LUT3       |    55|
+|6     |LUT4       |   151|
+|7     |LUT5       |   106|
+|8     |LUT6       |   306|
 |9     |MMCME2_ADV |     1|
 |10    |MUXF7      |    20|
 |11    |RAM64M     |    60|
 |12    |RAM64X1D   |    20|
 |13    |RAMB18E1   |     6|
-|14    |FDRE       |   265|
-|15    |FDSE       |     6|
+|14    |FDRE       |   297|
+|15    |FDSE       |    17|
 |16    |IBUF       |    13|
 |17    |OBUF       |    40|
 +------+-----------+------+
@@ -1013,63 +1038,62 @@ Report Instance Areas:
 +------+------------------+--------------------------------+------+
 |      |Instance          |Module                          |Cells |
 +------+------------------+--------------------------------+------+
-|1     |top               |                                |  1718|
-|2     |  db1             |Draw_Background                 |    14|
-|3     |  dbut            |single_pulse                    |     2|
-|4     |    dff_1         |d_flip_flop_16                  |     1|
-|5     |    dff_2         |d_flip_flop_17                  |     1|
-|6     |  dgb             |draw_game_background            |    19|
-|7     |    record_ins    |Pixel_On_Text2__parameterized8  |    19|
-|8     |  dt1             |draw_text                       |   262|
-|9     |    modes         |Pixel_On_Text2__parameterized7  |    18|
-|10    |      FontRom     |Font_Rom_15                     |     8|
-|11    |    open_option   |Pixel_On_Text2                  |   152|
-|12    |      FontRom     |Font_Rom_14                     |   135|
-|13    |    options       |Pixel_On_Text2__parameterized0  |    10|
-|14    |    sw0           |Pixel_On_Text2__parameterized1  |    20|
-|15    |      FontRom     |Font_Rom_13                     |     8|
-|16    |    sw1           |Pixel_On_Text2__parameterized2  |    11|
-|17    |    sw14          |Pixel_On_Text2__parameterized5  |    17|
-|18    |      FontRom     |Font_Rom_12                     |     6|
-|19    |    sw15          |Pixel_On_Text2__parameterized6  |    10|
-|20    |    sw2           |Pixel_On_Text2__parameterized3  |    13|
-|21    |      FontRom     |Font_Rom_11                     |     6|
-|22    |    sw3           |Pixel_On_Text2__parameterized4  |    10|
-|23    |  dw1             |Draw_Waveform                   |   199|
-|24    |  gbc             |generate_button_clock           |    29|
-|25    |  grt             |game_record_text                |    75|
-|26    |    record_ins    |Pixel_On_Text2__parameterized9  |    43|
-|27    |      FontRom     |Font_Rom                        |    30|
-|28    |    record_status |Pixel_On_Text2__parameterized10 |    31|
-|29    |  lbut            |single_pulse_0                  |     3|
-|30    |    dff_1         |d_flip_flop_9                   |     2|
-|31    |    dff_2         |d_flip_flop_10                  |     1|
-|32    |  mbut            |single_pulse_1                  |     4|
-|33    |    dff_1         |d_flip_flop_7                   |     1|
-|34    |    dff_2         |d_flip_flop_8                   |     3|
-|35    |  mc              |mode_changer                    |     4|
-|36    |  my_20khz        |clk_div                         |    23|
-|37    |  nolabel_line133 |VGA_DISPLAY                     |   649|
-|38    |    VGA_CLK_108M  |CLK_108M                        |     3|
-|39    |    VGA_CONTROL   |VGA_CONTROL                     |   632|
-|40    |  rbut            |single_pulse_2                  |     2|
-|41    |    dff_1         |d_flip_flop_5                   |     1|
-|42    |    dff_2         |d_flip_flop_6                   |     1|
-|43    |  ts              |theme_selector                  |    70|
-|44    |  tvg             |TestWave_Gen                    |    22|
-|45    |  ubut            |single_pulse_3                  |     3|
-|46    |    dff_1         |d_flip_flop                     |     2|
-|47    |    dff_2         |d_flip_flop_4                   |     1|
-|48    |  vc1             |Voice_Capturer                  |    95|
-|49    |  vi              |Volume_Indicator                |   186|
-|50    |    ssd           |seven_seg_display               |    97|
+|1     |top               |                                |  1795|
+|2     |  dbut            |single_pulse                    |     2|
+|3     |    dff_1         |d_flip_flop_16                  |     1|
+|4     |    dff_2         |d_flip_flop_17                  |     1|
+|5     |  dgb             |draw_game_background            |    24|
+|6     |    record_ins    |Pixel_On_Text2__parameterized8  |    24|
+|7     |  dt1             |draw_text                       |   273|
+|8     |    modes         |Pixel_On_Text2__parameterized7  |    17|
+|9     |      FontRom     |Font_Rom_15                     |     7|
+|10    |    open_option   |Pixel_On_Text2                  |   151|
+|11    |      FontRom     |Font_Rom_14                     |   134|
+|12    |    options       |Pixel_On_Text2__parameterized0  |    10|
+|13    |    sw0           |Pixel_On_Text2__parameterized1  |    30|
+|14    |      FontRom     |Font_Rom_13                     |     7|
+|15    |    sw1           |Pixel_On_Text2__parameterized2  |    10|
+|16    |    sw14          |Pixel_On_Text2__parameterized5  |    20|
+|17    |      FontRom     |Font_Rom_12                     |     9|
+|18    |    sw15          |Pixel_On_Text2__parameterized6  |    10|
+|19    |    sw2           |Pixel_On_Text2__parameterized3  |    14|
+|20    |      FontRom     |Font_Rom_11                     |     7|
+|21    |    sw3           |Pixel_On_Text2__parameterized4  |    10|
+|22    |  dw1             |Draw_Waveform                   |   198|
+|23    |  gbc             |generate_button_clock           |    29|
+|24    |  grt             |game_record_text                |    83|
+|25    |    record_ins    |Pixel_On_Text2__parameterized9  |    46|
+|26    |      FontRom     |Font_Rom                        |    28|
+|27    |    record_status |Pixel_On_Text2__parameterized10 |    36|
+|28    |  lbut            |single_pulse_0                  |     3|
+|29    |    dff_1         |d_flip_flop_9                   |     2|
+|30    |    dff_2         |d_flip_flop_10                  |     1|
+|31    |  mbut            |single_pulse_1                  |     4|
+|32    |    dff_1         |d_flip_flop_7                   |     1|
+|33    |    dff_2         |d_flip_flop_8                   |     3|
+|34    |  mc              |mode_changer                    |     4|
+|35    |  my_20khz        |clk_div                         |    23|
+|36    |  nolabel_line135 |VGA_DISPLAY                     |   650|
+|37    |    VGA_CLK_108M  |CLK_108M                        |     3|
+|38    |    VGA_CONTROL   |VGA_CONTROL                     |   630|
+|39    |  rbut            |single_pulse_2                  |     2|
+|40    |    dff_1         |d_flip_flop_5                   |     1|
+|41    |    dff_2         |d_flip_flop_6                   |     1|
+|42    |  ts              |theme_selector                  |   149|
+|43    |  tvg             |TestWave_Gen                    |    23|
+|44    |  ubut            |single_pulse_3                  |     2|
+|45    |    dff_1         |d_flip_flop                     |     1|
+|46    |    dff_2         |d_flip_flop_4                   |     1|
+|47    |  vc1             |Voice_Capturer                  |    84|
+|48    |  vi              |Volume_Indicator                |   182|
+|49    |    ssd           |seven_seg_display               |    95|
 +------+------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 816.266 ; gain = 559.266
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 829.348 ; gain = 226.563
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 829.348 ; gain = 572.871
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 816.266 ; gain = 213.715
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 816.266 ; gain = 559.266
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 313 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1081,11 +1105,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 20 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-169 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+197 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 829.348 ; gain = 585.887
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 816.266 ; gain = 572.273
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/Voice_Scope_TOP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 829.348 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 06:03:52 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 816.266 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 18:12:13 2019...
