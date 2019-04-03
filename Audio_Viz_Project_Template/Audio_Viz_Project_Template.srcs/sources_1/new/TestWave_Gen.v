@@ -20,13 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module TestWave_Gen(input wave_clock, output reg [9:0] counter = 0, input [11:0] sound_sample);
-        always @ (posedge wave_clock) begin
-
-        if (counter >= 640) begin
-                counter = 0;
-        end
+module TestWave_Gen(
+    input wave_clock, 
+    output reg [9:0] counter = 0, 
+    input [11:0] sound_sample,
+    input pause_switch,
+    input [1:0] mode
+    );
+    
+    always @ (posedge wave_clock) begin
+        if (pause_switch == 0 && mode == 0) begin
+            if (counter == 640) counter = 0;
             counter = counter + 1; 
         end
-
+    end
 endmodule

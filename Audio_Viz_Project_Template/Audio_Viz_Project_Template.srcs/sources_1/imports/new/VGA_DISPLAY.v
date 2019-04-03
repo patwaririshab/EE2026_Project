@@ -25,6 +25,10 @@ module VGA_DISPLAY(
     input [3:0] VGA_GREEN_GRID,
     input [3:0] VGA_BLUE_GRID,
     
+    input [3:0] VGA_red_text,
+    input [3:0] VGA_green_text,
+    input [3:0] VGA_blue_text,
+    
     output [11:0] VGA_HORZ_COORD,
     output [11:0] VGA_VERT_COORD, 
 
@@ -32,23 +36,35 @@ module VGA_DISPLAY(
     output reg[3:0] VGA_GREEN,
     output reg[3:0] VGA_BLUE,
     output reg VGA_VS,          // horizontal & vertical sync outputs to VGA connector
-    output reg VGA_HS
+    output reg VGA_HS,
 
+    output CLK_VGA,
+    input [1:0] mode,
+    
+    input [3:0] VGA_game_red_back,
+    input [3:0] VGA_game_green_back,
+    input [3:0] VGA_game_blue_back,
+    input [3:0] VGA_game_red_text,
+    input [3:0] VGA_game_green_text,
+    input [3:0] VGA_game_blue_text
     );
     
-    
-    // COMBINE ALL OUTPUTS ON EACH CHANNEL
-    wire[3:0] VGA_RED_CHAN = VGA_RED_GRID | VGA_RED_WAVEFORM ;
-    wire[3:0] VGA_GREEN_CHAN = VGA_GREEN_GRID | VGA_GREEN_WAVEFORM ; 
-    wire[3:0] VGA_BLUE_CHAN = VGA_BLUE_GRID | VGA_BLUE_WAVEFORM;   
-    
+    //wire [100*8:0] test_string = "hahaha";
     
     // VGA Clock Generator (108MHz)
-    wire CLK_VGA;
+    //wire CLK_VGA;
     CLK_108M VGA_CLK_108M( 
-            CLK,   // 100 MHz
-            CLK_VGA     // 108 MHz
-        ) ; 
+        CLK,   // 100 MHz
+        CLK_VGA     // 108 MHz
+    );
+      
+    // COMBINE ALL OUTPUTS ON EACH CHANNEL
+    wire[3:0] VGA_RED_CHAN = (mode == 0) ? (VGA_RED_GRID | VGA_RED_WAVEFORM | VGA_red_text) 
+        : (VGA_game_red_back | VGA_game_red_text);
+    wire[3:0] VGA_GREEN_CHAN = (mode == 0) ? (VGA_GREEN_GRID | VGA_GREEN_WAVEFORM | VGA_green_text) 
+        : (VGA_game_green_back | VGA_game_green_text); 
+    wire[3:0] VGA_BLUE_CHAN = (mode == 0) ? (VGA_BLUE_GRID | VGA_BLUE_WAVEFORM | VGA_blue_text) 
+        : (VGA_game_blue_back | VGA_game_blue_text);   
         
     // VGA CONTROLLER   
     wire VGA_ACTIVE;
@@ -62,8 +78,7 @@ module VGA_DISPLAY(
             VGA_ACTIVE,  
             VGA_HORZ_COORD,  
             VGA_VERT_COORD  
-        ) ; 
-    
+        ) ;
 
     
     // CLOCK THEM OUT
