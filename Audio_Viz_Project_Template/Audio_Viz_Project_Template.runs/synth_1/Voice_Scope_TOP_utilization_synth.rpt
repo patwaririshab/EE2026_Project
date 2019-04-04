@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Apr  4 11:05:08 2019
+| Date         : Fri Apr  5 00:07:19 2019
 | Host         : RaghavDesktop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Voice_Scope_TOP_utilization_synth.rpt -pb Voice_Scope_TOP_utilization_synth.pb
 | Design       : Voice_Scope_TOP
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2684 |     0 |     20800 | 12.90 |
-|   LUT as Logic             | 1844 |     0 |     20800 |  8.87 |
+| Slice LUTs*                | 2893 |     0 |     20800 | 13.91 |
+|   LUT as Logic             | 2053 |     0 |     20800 |  9.87 |
 |   LUT as Memory            |  840 |     0 |      9600 |  8.75 |
 |     LUT as Distributed RAM |  840 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  649 |     0 |     41600 |  1.56 |
-|   Register as Flip Flop    |  649 |     0 |     41600 |  1.56 |
+| Slice Registers            |  702 |     0 |     41600 |  1.69 |
+|   Register as Flip Flop    |  702 |     0 |     41600 |  1.69 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                   |   60 |     0 |     16300 |  0.37 |
 | F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 80    |          Yes |         Set |            - |
-| 569   |          Yes |       Reset |            - |
+| 77    |          Yes |         Set |            - |
+| 625   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,10 +69,10 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  5.5 |     0 |        50 | 11.00 |
+| Block RAM Tile    |    6 |     0 |        50 | 12.00 |
 |   RAMB36/FIFO*    |    0 |     0 |        50 |  0.00 |
-|   RAMB18          |   11 |     0 |       100 | 11.00 |
-|     RAMB18E1 only |   11 |       |           |       |
+|   RAMB18          |   12 |     0 |       100 | 12.00 |
+|     RAMB18E1 only |   12 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -153,19 +153,19 @@ Table of Contents
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
 | RAMD64E    |  840 |  Distributed Memory |
-| LUT6       |  680 |                 LUT |
-| FDRE       |  569 |        Flop & Latch |
-| LUT2       |  490 |                 LUT |
-| LUT4       |  396 |                 LUT |
-| CARRY4     |  334 |          CarryLogic |
-| LUT1       |  313 |                 LUT |
-| LUT5       |  241 |                 LUT |
-| LUT3       |  184 |                 LUT |
-| FDSE       |   80 |        Flop & Latch |
+| LUT6       |  708 |                 LUT |
+| FDRE       |  625 |        Flop & Latch |
+| LUT2       |  573 |                 LUT |
+| LUT4       |  446 |                 LUT |
+| CARRY4     |  380 |          CarryLogic |
+| LUT1       |  359 |                 LUT |
+| LUT5       |  302 |                 LUT |
+| LUT3       |  182 |                 LUT |
+| FDSE       |   77 |        Flop & Latch |
 | MUXF7      |   60 |               MuxFx |
 | OBUF       |   40 |                  IO |
 | IBUF       |   14 |                  IO |
-| RAMB18E1   |   11 |        Block Memory |
+| RAMB18E1   |   12 |        Block Memory |
 | BUFG       |    6 |               Clock |
 | MMCME2_ADV |    1 |               Clock |
 +------------+------+---------------------+

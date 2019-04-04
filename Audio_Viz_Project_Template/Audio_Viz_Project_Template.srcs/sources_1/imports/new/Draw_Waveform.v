@@ -3,15 +3,13 @@
 // You may study and modify the code inside this module to imporve the display feature or introduce other features
 //////////////////////////////////////////////////////////////////////////////////
 
-module Draw_Waveform(
+module draw_waveform(
     input clk_sample, //20kHz clock
 
     input [9:0] wave_sample,
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
-    output [3:0] VGA_Red_waveform,
-    output [3:0] VGA_Green_waveform,
-    output [3:0] VGA_Blue_waveform,
+    output [14:0] VGA_mode_one_waveform,
     
     input wave_switch,
     input pause_switch,
@@ -33,11 +31,20 @@ module Draw_Waveform(
         end       
     end
     
-    wire Condition_For_Wave = wave_switch;     
-
-    assign VGA_Red_waveform = Condition_For_Wave ? (((VGA_HORZ_COORD < 1280) && (VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]))) ? cur_theme_wave[3:0] : cur_theme_background[3:0]) : cur_theme_background[3:0];
-    assign VGA_Green_waveform = Condition_For_Wave ? (((VGA_HORZ_COORD < 1280) && (VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]))) ? cur_theme_wave[7:4] : cur_theme_background[7:4]) : cur_theme_background[7:4];
-    assign VGA_Blue_waveform = Condition_For_Wave ? (((VGA_HORZ_COORD < 1280) && (VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]))) ? cur_theme_wave[11:8] : cur_theme_background[11:8]) : cur_theme_background[11:8];
-
+    wire Condition_For_Wave = wave_switch;
     
+    assign VGA_mode_one_waveform[4:0] = Condition_For_Wave ? VGA_HORZ_COORD < 1280 && 
+        VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]) ? {1'b1, cur_theme_wave[3:0]}
+        : {1'b0, cur_theme_background[3:0]}
+        : {1'b0, cur_theme_background[3:0]};
+        
+    assign VGA_mode_one_waveform[9:5] = Condition_For_Wave ? VGA_HORZ_COORD < 1280 && 
+        VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]) ? {1'b1, cur_theme_wave[7:4]} 
+        : {1'b0, cur_theme_background[7:4]} 
+        : {1'b0, cur_theme_background[7:4]};
+    
+    assign VGA_mode_one_waveform[14:10] = Condition_For_Wave ? VGA_HORZ_COORD < 1280 && 
+        VGA_VERT_COORD == (1024 - Sample_Memory[VGA_HORZ_COORD]) ? {1'b1, cur_theme_wave[11:8]} 
+        : {1'b0, cur_theme_background[11:8]} 
+        : {1'b0, cur_theme_background[11:8]};
 endmodule

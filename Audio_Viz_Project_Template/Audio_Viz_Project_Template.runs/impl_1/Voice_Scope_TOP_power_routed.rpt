@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Apr  4 11:06:56 2019
+| Date             : Fri Apr  5 00:09:04 2019
 | Host             : RaghavDesktop running 64-bit major release  (build 9200)
 | Command          : report_power -file Voice_Scope_TOP_power_routed.rpt -pb Voice_Scope_TOP_power_summary_routed.pb -rpx Voice_Scope_TOP_power_routed.rpx
 | Design           : Voice_Scope_TOP
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.258        |
+| Total On-Chip Power (W)  | 0.264        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.185        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.191        |
+| Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.7         |
 | Junction Temperature (C) | 26.3         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        5 |       --- |             --- |
-| Slice Logic              |     0.010 |     4310 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     1847 |     20800 |            8.88 |
-|   CARRY4                 |    <0.001 |      334 |      8150 |            4.10 |
+| Clocks                   |     0.006 |        5 |       --- |             --- |
+| Slice Logic              |     0.012 |     4683 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     2054 |     20800 |            9.88 |
+|   CARRY4                 |    <0.001 |      380 |      8150 |            4.66 |
 |   LUT as Distributed RAM |    <0.001 |      840 |      9600 |            8.75 |
-|   Register               |    <0.001 |      661 |     41600 |            1.59 |
+|   Register               |    <0.001 |      714 |     41600 |            1.72 |
 |   F7/F8 Muxes            |    <0.001 |       60 |     32600 |            0.18 |
 |   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
-|   Others                 |     0.000 |      110 |       --- |             --- |
-| Signals                  |     0.023 |     2901 |       --- |             --- |
-| Block RAM                |     0.021 |      5.5 |        50 |           11.00 |
+|   Others                 |     0.000 |      118 |       --- |             --- |
+| Signals                  |     0.025 |     3112 |       --- |             --- |
+| Block RAM                |     0.024 |        6 |        50 |           12.00 |
 | MMCM                     |     0.123 |        1 |         5 |           20.00 |
-| I/O                      |     0.004 |       54 |       106 |           50.94 |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.258 |          |           |                 |
+| I/O                      |     0.002 |       54 |       106 |           50.94 |
+| Static Power             |     0.073 |          |           |                 |
+| Total                    |     0.264 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.068 |       0.058 |      0.010 |
+| Vccint    |       1.000 |     0.075 |       0.065 |      0.010 |
 | Vccaux    |       1.800 |     0.081 |       0.068 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -132,8 +132,8 @@ Table of Contents
 +--------------------+-------------------------------------------------+-----------------+
 | Clock              | Domain                                          | Constraint (ns) |
 +--------------------+-------------------------------------------------+-----------------+
-| clk_out1_clk_wiz_0 | nolabel_line158/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
-| clkfbout_clk_wiz_0 | nolabel_line158/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
+| clk_out1_clk_wiz_0 | nolabel_line156/VGA_CLK_108M/clk_out1_clk_wiz_0 |             9.3 |
+| clkfbout_clk_wiz_0 | nolabel_line156/VGA_CLK_108M/clkfbout_clk_wiz_0 |            10.0 |
 | sys_clk_pin        | CLK                                             |            10.0 |
 +--------------------+-------------------------------------------------+-----------------+
 
@@ -147,7 +147,7 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| Voice_Scope_TOP                     |     0.185 |
+| Voice_Scope_TOP                     |     0.191 |
 |   br                                |     0.001 |
 |     Sample_Memory_reg_0_63_0_2      |     0.000 |
 |     Sample_Memory_reg_0_63_3_5      |     0.000 |
@@ -232,12 +232,11 @@ Table of Contents
 |   dbut                              |    <0.001 |
 |     dff_1                           |    <0.001 |
 |     dff_2                           |    <0.001 |
-|   dgb                               |     0.009 |
-|     got                             |     0.003 |
+|   dgb                               |     0.007 |
+|     got                             |    <0.001 |
+|     gwt                             |     0.003 |
 |       FontRom                       |     0.003 |
-|     gwt                             |    <0.001 |
-|     hp_bar_text                     |     0.003 |
-|       FontRom                       |     0.002 |
+|     hp_bar_text                     |    <0.001 |
 |     recorded_wave_reg_0_63_0_2      |    <0.001 |
 |     recorded_wave_reg_0_63_3_5      |    <0.001 |
 |     recorded_wave_reg_0_63_6_8      |    <0.001 |
@@ -318,22 +317,24 @@ Table of Contents
 |     recorded_wave_reg_960_1023_3_5  |    <0.001 |
 |     recorded_wave_reg_960_1023_6_8  |    <0.001 |
 |     recorded_wave_reg_960_1023_9_9  |    <0.001 |
-|   dt1                               |     0.017 |
-|     modes                           |     0.002 |
+|   dt_mode_one                       |     0.018 |
+|     modes                           |    <0.001 |
+|     noise                           |    <0.001 |
+|     open_option                     |     0.005 |
+|     options                         |     0.003 |
 |       FontRom                       |     0.002 |
-|     open_option                     |     0.006 |
-|       FontRom                       |     0.006 |
-|     options                         |    <0.001 |
-|     sw0                             |     0.002 |
+|     sw0                             |    <0.001 |
+|     sw1                             |     0.002 |
 |       FontRom                       |     0.002 |
-|     sw1                             |    <0.001 |
-|     sw14                            |     0.003 |
+|     sw14                            |    <0.001 |
+|     sw15                            |     0.002 |
 |       FontRom                       |     0.002 |
-|     sw15                            |    <0.001 |
-|     sw2                             |     0.002 |
+|     sw2                             |    <0.001 |
+|     sw3                             |     0.003 |
 |       FontRom                       |     0.002 |
-|     sw3                             |    <0.001 |
-|   dw1                               |     0.003 |
+|     themes                          |     0.002 |
+|       FontRom                       |     0.002 |
+|   dw_mode_one                       |     0.003 |
 |     Sample_Memory_reg_0_63_0_2      |    <0.001 |
 |     Sample_Memory_reg_0_63_3_5      |    <0.001 |
 |     Sample_Memory_reg_0_63_6_8      |    <0.001 |
@@ -415,29 +416,32 @@ Table of Contents
 |     Sample_Memory_reg_960_1023_6_8  |    <0.001 |
 |     Sample_Memory_reg_960_1023_9_9  |    <0.001 |
 |   gbc                               |    <0.001 |
-|   grt                               |     0.008 |
-|     escape                          |     0.003 |
-|     proceed                         |     0.002 |
+|   grt                               |     0.010 |
+|     escape                          |     0.004 |
+|       FontRom                       |     0.004 |
+|     proceed                         |    <0.001 |
+|     record_completed                |     0.002 |
 |       FontRom                       |     0.002 |
-|     record_completed                |    <0.001 |
-|     record_ins                      |     0.002 |
+|     record_ins                      |    <0.001 |
+|     record_status                   |     0.003 |
 |       FontRom                       |     0.002 |
-|     record_status                   |    <0.001 |
 |   lbut                              |    <0.001 |
 |     dff_1                           |    <0.001 |
 |     dff_2                           |    <0.001 |
-|   maf                               |     0.001 |
+|   maf                               |    <0.001 |
 |   mbut                              |    <0.001 |
 |     dff_1                           |    <0.001 |
 |     dff_2                           |    <0.001 |
-|   mc                                |    <0.001 |
+|   mc                                |     0.005 |
+|     mc0                             |     0.003 |
+|       FontRom                       |     0.002 |
+|     mc1                             |    <0.001 |
+|     mc2                             |     0.002 |
+|       FontRom                       |     0.002 |
 |   my_20khz                          |    <0.001 |
-|   nolabel_line158                   |     0.140 |
+|   nolabel_line156                   |     0.141 |
 |     VGA_CLK_108M                    |     0.124 |
-|     VGA_CONTROL                     |     0.015 |
-|     mc0                             |    <0.001 |
-|     mc1                             |     0.001 |
-|       FontRom                       |     0.001 |
+|     VGA_CONTROL                     |     0.017 |
 |   rbut                              |    <0.001 |
 |     dff_1                           |    <0.001 |
 |     dff_2                           |    <0.001 |

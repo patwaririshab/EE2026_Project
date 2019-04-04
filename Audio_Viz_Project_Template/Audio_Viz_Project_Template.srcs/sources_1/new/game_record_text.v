@@ -19,17 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module game_record_text(
     input CLK_VGA,
     input button_clock,
-    
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
     
-    output [3:0] VGA_game_red_text,
-    output [3:0] VGA_game_green_text,
-    output [3:0] VGA_game_blue_text, 
+    output [14:0] VGA_game_text, 
     
     input middle_button_out,
     input left_button_out,
@@ -90,8 +86,10 @@ module game_record_text(
         (VGA_VERT_COORD == 5 && (VGA_HORZ_COORD >= 5 && VGA_HORZ_COORD <= 350)) ||
         (VGA_VERT_COORD == 55 && (VGA_HORZ_COORD >= 5 && VGA_HORZ_COORD <= 350));
     
-    assign final_condition = (game_running == 0) ? ((recorded == 0) ? ((recording == 0) ? recording_ins_text : (recording_ins_text || recording_status_text)) 
-        : (proceed_text || recording_completed_text)) : escape_text;
+    assign final_condition = (game_running == 1) ? escape_text
+        : (recorded == 1) ? proceed_text || recording_completed_text
+        : (recording == 1) ? recording_ins_text || recording_status_text
+        : recording_ins_text;
     
     Pixel_On_text2 #(.displayText("Press middle button to restart")) escape (
         CLK_VGA,
@@ -100,8 +98,7 @@ module game_record_text(
         VGA_HORZ_COORD, // current position.x
         VGA_VERT_COORD, // current position.y
         escape_text  // result, 1 if current pixel is on text, 0 otherwise
-    );
-    
+    ); 
     Pixel_On_text2 #(.displayText("Press middle button to proceed")) proceed (
         CLK_VGA,
         15, // text position.x (top left)
@@ -117,8 +114,7 @@ module game_record_text(
        VGA_HORZ_COORD, // current position.x
        VGA_VERT_COORD, // current position.y
        recording_completed_text  // result, 1 if current pixel is on text, 0 otherwise
-   );
-
+    );
     Pixel_On_text2 #(.displayText("Press middle button to start recording")) record_ins (
         CLK_VGA,
         15, // text position.x (top left)
@@ -136,7 +132,18 @@ module game_record_text(
         recording_status_text  // result, 1 if current pixel is on text, 0 otherwise
     );
     
-    assign VGA_game_red_text = final_condition ? 4'hF : (dialog_box_condition ? 4'h9 : (dialog_box_edge_condition ? 4'hF : 0));
-    assign VGA_game_green_text = final_condition ? 4'hF : (dialog_box_condition ? 4'h9 : (dialog_box_edge_condition ? 4'hF : 0));
-    assign VGA_game_blue_text = final_condition ? 4'hF : (dialog_box_condition ? 4'h9 : (dialog_box_edge_condition ? 4'hF : 0));
+    assign VGA_game_text[4:0] = final_condition ? {1'b1, 4'hF} 
+        : dialog_box_condition ? {1'b1, 4'h0} 
+        : dialog_box_edge_condition ? {1'b1, 4'hF} 
+        : {1'b0, 4'h0};
+        
+    assign VGA_game_text[9:5] = final_condition ? {1'b1, 4'hF} 
+        : dialog_box_condition ? {1'b1, 4'h0} 
+        : dialog_box_edge_condition ? {1'b1, 4'hF} 
+        : {1'b0, 4'h0};
+        
+    assign VGA_game_text[14:10] = final_condition ? {1'b1, 4'hF} 
+        : dialog_box_condition ? {1'b1, 4'h0} 
+        : dialog_box_edge_condition ? {1'b1, 4'hF} 
+        : {1'b0, 4'h0};
 endmodule

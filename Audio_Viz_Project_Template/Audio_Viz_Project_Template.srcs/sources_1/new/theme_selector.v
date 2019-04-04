@@ -84,9 +84,9 @@ module theme_selector(
                     cur_theme[2][7:4] = 4'ha;
                     cur_theme[2][11:8] = 4'ha;
                     // Tick
-                    cur_theme[3][3:0] = 4'h3;
-                    cur_theme[3][7:4] = 4'h6;
-                    cur_theme[3][11:8] = 4'h5;
+                    cur_theme[3][3:0] = 4'h0;
+                    cur_theme[3][7:4] = 4'h0;
+                    cur_theme[3][11:8] = 4'h0;
                     //Background
                     cur_theme[4][3:0] = 4'h3;
                     cur_theme[4][7:4] = 4'h4;
@@ -139,24 +139,24 @@ module theme_selector(
                 4: begin //Fun and tropical
                     // Wave
                     cur_theme[0][3:0] = 4'hf;
-                    cur_theme[0][7:4] = 4'h6;
-                    cur_theme[0][11:8] = 4'h5;
+                    cur_theme[0][7:4] = 4'hf;
+                    cur_theme[0][11:8] = 4'hf;
                     // Axes
-                    cur_theme[1][3:0] = 4'hf;
-                    cur_theme[1][7:4] = 4'hd;
-                    cur_theme[1][11:8] = 4'h5;
+                    cur_theme[1][3:0] = 4'h5;
+                    cur_theme[1][7:4] = 4'ha;
+                    cur_theme[1][11:8] = 4'ha;
                     // Grid
-                    cur_theme[2][3:0] = 4'hf;
-                    cur_theme[2][7:4] = 4'hd;
-                    cur_theme[2][11:8] = 4'h5;
+                    cur_theme[2][3:0] = 4'h5;
+                    cur_theme[2][7:4] = 4'ha;
+                    cur_theme[2][11:8] = 4'ha;
                     // Tick
-                    cur_theme[3][3:0] = 4'hf;
-                    cur_theme[3][7:4] = 4'hf;
-                    cur_theme[3][11:8] = 4'h5;
+                    cur_theme[3][3:0] = 4'h0;
+                    cur_theme[3][7:4] = 4'h0;
+                    cur_theme[3][11:8] = 4'h0;
                     //Background
                     cur_theme[4][3:0] = 4'h4;
-                    cur_theme[4][7:4] = 4'h9;
-                    cur_theme[4][11:8] = 4'hd;
+                    cur_theme[4][7:4] = 4'h4;
+                    cur_theme[4][11:8] = 4'hf;
                 end
             endcase
             

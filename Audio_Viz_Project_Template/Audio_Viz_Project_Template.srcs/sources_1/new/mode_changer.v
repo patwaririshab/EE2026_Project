@@ -21,10 +21,16 @@
 
 
 module mode_changer(
+    input CLK_VGA,
+    input [11:0] VGA_HORZ_COORD,
+    input [11:0] VGA_VERT_COORD,
+    
     input button_clock,
     input up_button_out,
     input down_button_out,
-    output reg [1:0] mode = 0
+    
+    output reg [1:0] mode = 0,
+    output [14:0] VGA_mode_selector
     );
     
     always @ (posedge button_clock) begin
@@ -34,8 +40,88 @@ module mode_changer(
         else if (down_button_out == 1 && up_button_out == 0) begin
             mode = (mode > 0) ? mode - 1 : 2;
         end
-        
         if (mode == 3) mode = 0;
-        
     end
+    
+    wire mode_condition0;
+    Pixel_On_text2 #(.displayText("Mode: Waveform")) mc0 (
+        CLK_VGA,
+        1110, // text position.x (top left)
+        1000, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        mode_condition0  // result, 1 if current pixel is on text, 0 otherwise
+    );
+    wire mode_condition1;
+    Pixel_On_text2 #(.displayText("Mode: Game")) mc1 (
+        CLK_VGA,
+        1110, // text position.x (top left)
+        1000, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        mode_condition1  // result, 1 if current pixel is on text, 0 otherwise
+    );
+    wire mode_condition2;
+    Pixel_On_text2 #(.displayText("Mode: Bar Visualizer")) mc2 (
+        CLK_VGA,
+        1110, // text position.x (top left)
+        1000, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        mode_condition2  // result, 1 if current pixel is on text, 0 otherwise
+    );
+    
+    wire condition_for_mode_text = VGA_HORZ_COORD > 1100 && VGA_VERT_COORD > 990;
+    wire condition_for_mode_outline = (VGA_HORZ_COORD == 1100 && VGA_VERT_COORD >= 990) ||
+        (VGA_VERT_COORD == 990 && VGA_HORZ_COORD >= 1100);
+    assign VGA_mode_selector[4:0] = 
+        (mode == 0) ? 
+            (mode_condition0 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        : (mode == 1) ?
+            (mode_condition1 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        :
+            (mode_condition2 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0});
+            
+    assign VGA_mode_selector[9:5] = 
+        (mode == 0) ? 
+            (mode_condition0 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        : (mode == 1) ?
+            (mode_condition1 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        :
+            (mode_condition2 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0});
+            
+    assign VGA_mode_selector[14:10] = 
+        (mode == 0) ? 
+            (mode_condition0 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        : (mode == 1) ?
+            (mode_condition1 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        :
+            (mode_condition2 ? {1'b1, 4'hF} 
+            : condition_for_mode_text ? {1'b1, 4'h0}
+            : condition_for_mode_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0});
 endmodule

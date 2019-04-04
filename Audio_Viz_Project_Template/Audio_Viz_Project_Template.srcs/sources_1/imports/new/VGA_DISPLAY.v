@@ -16,96 +16,94 @@
 
 module VGA_DISPLAY(
     input CLK,
-
-    input [3:0] VGA_RED_WAVEFORM, 
-    input [3:0] VGA_GREEN_WAVEFORM, 
-    input [3:0] VGA_BLUE_WAVEFORM,
-    
-    input [3:0] VGA_RED_GRID,
-    input [3:0] VGA_GREEN_GRID,
-    input [3:0] VGA_BLUE_GRID,
-    
-    input [3:0] VGA_red_text,
-    input [3:0] VGA_green_text,
-    input [3:0] VGA_blue_text,
-    
     output [11:0] VGA_HORZ_COORD,
     output [11:0] VGA_VERT_COORD, 
-
-    output reg[3:0] VGA_RED,    // RGB outputs to VGA connector (4 bits per channel gives 4096 possible colors)
-    output reg[3:0] VGA_GREEN,
-    output reg[3:0] VGA_BLUE,
-    output reg VGA_VS,          // horizontal & vertical sync outputs to VGA connector
-    output reg VGA_HS,
-
     output CLK_VGA,
     input [1:0] mode,
+    input [14:0] VGA_mode_selector,
     
-    input [3:0] VGA_game_red_back,
-    input [3:0] VGA_game_green_back,
-    input [3:0] VGA_game_blue_back,
-    input [3:0] VGA_game_red_text,
-    input [3:0] VGA_game_green_text,
-    input [3:0] VGA_game_blue_text,
-    input [3:0] VGA_game_red_end,
-    input [3:0] VGA_game_green_end,
-    input [3:0] VGA_game_blue_end,
-    input [3:0] VGA_game_red_waveform,
-    input [3:0] VGA_game_green_waveform,
-    input [3:0] VGA_game_blue_waveform,
+    output reg [3:0] VGA_RED, // RGB outputs to VGA connector (4 bits per channel gives 4096 possible colors)
+    output reg [3:0] VGA_GREEN,
+    output reg [3:0] VGA_BLUE,
+    output reg VGA_VS, // horizontal & vertical sync outputs to VGA connector
+    output reg VGA_HS,
+    
+    input [14:0] VGA_mode_one_text,
+    input [14:0] VGA_mode_one_waveform,
+    input [14:0] VGA_mode_one_tick,
+    input [14:0] VGA_mode_one_grid,
+    input [14:0] VGA_mode_one_back,    
+    
+    input [14:0] VGA_game_end_text,
+    input [14:0] VGA_game_text,
+    input [14:0] VGA_game_player,
+    input [14:0] VGA_game_cliff,
+    input [14:0] VGA_game_cloud,
+    input [14:0] VGA_game_back,
+    
     input [3:0] VGA_red_visualize, 
     input [3:0] VGA_green_visualize, 
     input [3:0] VGA_blue_visualize
-    );
-    
-    //wire [100*8:0] test_string = "hahaha";
+    );   
     
     // VGA Clock Generator (108MHz)
-    //wire CLK_VGA;
     CLK_108M VGA_CLK_108M( 
         CLK,   // 100 MHz
         CLK_VGA     // 108 MHz
     );
     
-    wire mode_condition0;
-    Pixel_On_text2 #(.displayText("Mode: Waveform")) mc0 (
-        CLK_VGA,
-        1150, // text position.x (top left)
-        1000, // text position.y (top left)
-        VGA_HORZ_COORD, // current position.x
-        VGA_VERT_COORD, // current position.y
-        mode_condition0  // result, 1 if current pixel is on text, 0 otherwise
-    );
-    wire mode_condition1;
-    Pixel_On_text2 #(.displayText("Mode: Game")) mc1 (
-        CLK_VGA,
-        1150, // text position.x (top left)
-        1000, // text position.y (top left)
-        VGA_HORZ_COORD, // current position.x
-        VGA_VERT_COORD, // current position.y
-        mode_condition1  // result, 1 if current pixel is on text, 0 otherwise
-    );
-    wire mode_box_condition = (VGA_HORZ_COORD > 1150) && (VGA_VERT_COORD > 950);
-    
-    wire [3:0] VGA_red_mode_label = (mode == 0) ? (mode_condition0 ? 4'hF : (mode_box_condition ? 4'hF : 0)) : (mode_condition1 ? 4'hF : (mode_box_condition ? 4'hF : 0)); 
-    wire [3:0] VGA_green_mode_label = (mode == 0) ? (mode_condition0 ? 4'hF : (mode_box_condition ? 4'h0 : 0)) : (mode_condition1 ? 4'hF : (mode_box_condition ? 4'h0 : 0)); 
-    wire [3:0] VGA_blue_mode_label = (mode == 0) ? (mode_condition0 ? 4'hF : (mode_box_condition ? 4'h0 : 0)) : (mode_condition1 ? 4'hF : (mode_box_condition ? 4'h0 : 0)); 
-    
     // COMBINE ALL OUTPUTS ON EACH CHANNEL
-    wire[3:0] VGA_RED_CHAN =
-          (mode == 0) ? (VGA_RED_GRID | VGA_RED_WAVEFORM | VGA_red_text | VGA_red_mode_label) 
-        : (mode == 1) ? (VGA_game_red_back | VGA_game_red_text | VGA_game_red_end | VGA_game_red_waveform | VGA_red_mode_label)
-        : (VGA_red_visualize | VGA_red_mode_label);
-    wire[3:0] VGA_GREEN_CHAN = 
-          (mode == 0) ? (VGA_GREEN_GRID | VGA_GREEN_WAVEFORM | VGA_green_text | VGA_green_mode_label) 
-        : (mode == 1) ? (VGA_game_green_back | VGA_game_green_text | VGA_game_green_end | VGA_game_green_waveform | VGA_green_mode_label) 
-        : (VGA_green_visualize | VGA_green_mode_label); 
-        
-    wire[3:0] VGA_BLUE_CHAN = 
-          (mode == 0) ? (VGA_BLUE_GRID | VGA_BLUE_WAVEFORM | VGA_blue_text | VGA_blue_mode_label) 
-        : (mode == 1) ? (VGA_game_blue_back | VGA_game_blue_text | VGA_game_blue_end | VGA_game_blue_waveform | VGA_blue_mode_label)
-        : (VGA_blue_visualize | VGA_blue_mode_label);   
-        
+    wire [3:0] VGA_RED_CHAN = VGA_mode_selector[4] ? VGA_mode_selector[3:0]
+        : (mode == 0) ?
+            (VGA_mode_one_text[4] ? VGA_mode_one_text[3:0]
+            : VGA_mode_one_waveform[4] ? VGA_mode_one_waveform[3:0]
+            : VGA_mode_one_tick[4] ? VGA_mode_one_tick[3:0]
+            : VGA_mode_one_grid[4] ? VGA_mode_one_grid[3:0]
+            : VGA_mode_one_back[3:0])
+        : (mode == 1) ?
+            (VGA_game_end_text[4] ? VGA_game_end_text[3:0]
+            : VGA_game_text[4] ? VGA_game_text[3:0]
+            : VGA_game_player[4] ? VGA_game_player[3:0]
+            : VGA_game_cliff[4] ? VGA_game_cliff[3:0]
+            : VGA_game_cloud[4] ? VGA_game_cloud[3:0]
+            : VGA_game_back[3:0])
+        :
+            (VGA_red_visualize);
+            
+    wire [3:0] VGA_GREEN_CHAN = VGA_mode_selector[9] ? VGA_mode_selector[8:5]
+        : (mode == 0) ?
+            (VGA_mode_one_text[9] ? VGA_mode_one_text[8:5]
+            : VGA_mode_one_waveform[9] ? VGA_mode_one_waveform[8:5]
+            : VGA_mode_one_tick[9] ? VGA_mode_one_tick[8:5]
+            : VGA_mode_one_grid[9] ? VGA_mode_one_grid[8:5]
+            : VGA_mode_one_back[8:5])
+        : (mode == 1) ?
+            (VGA_game_end_text[9] ? VGA_game_end_text[8:5]
+            : VGA_game_text[9] ? VGA_game_text[8:5]
+            : VGA_game_player[9] ? VGA_game_player[8:5]
+            : VGA_game_cliff[9] ? VGA_game_cliff[8:5]
+            : VGA_game_cloud[9] ? VGA_game_cloud[8:5]
+            : VGA_game_back[8:5])
+        :
+            (VGA_green_visualize);
+             
+     wire [3:0] VGA_BLUE_CHAN = VGA_mode_selector[14] ? VGA_mode_selector[13:10]
+        : (mode == 0) ?
+            (VGA_mode_one_text[14] ? VGA_mode_one_text[13:10]
+            : VGA_mode_one_waveform[14] ? VGA_mode_one_waveform[13:10]
+            : VGA_mode_one_tick[14] ? VGA_mode_one_tick[13:10]
+            : VGA_mode_one_grid[14] ? VGA_mode_one_grid[13:10]
+            : VGA_mode_one_back[13:10])
+        : (mode == 1) ?
+            (VGA_game_end_text[14] ? VGA_game_end_text[13:10]
+            : VGA_game_text[14] ? VGA_game_text[13:10]
+            : VGA_game_player[14] ? VGA_game_player[13:10]
+            : VGA_game_cliff[14] ? VGA_game_cliff[13:10]
+            : VGA_game_cloud[14] ? VGA_game_cloud[13:10]
+            : VGA_game_back[13:10])
+        :
+            (VGA_blue_visualize);
+
     // VGA CONTROLLER   
     wire VGA_ACTIVE;
     wire VGA_HORZ_SYNC;
@@ -120,10 +118,8 @@ module VGA_DISPLAY(
             VGA_VERT_COORD  
         ) ;
 
-    
-    // CLOCK THEM OUT
+    // Do not touch this
     always@(posedge CLK_VGA) begin      
-        
             VGA_RED <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_RED_CHAN ;  
             VGA_GREEN <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_GREEN_CHAN ; 
             VGA_BLUE <= {VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE, VGA_ACTIVE} & VGA_BLUE_CHAN ; 
@@ -133,6 +129,4 @@ module VGA_DISPLAY(
             VGA_VS <= VGA_VERT_SYNC ;
             
     end
-    
-
 endmodule

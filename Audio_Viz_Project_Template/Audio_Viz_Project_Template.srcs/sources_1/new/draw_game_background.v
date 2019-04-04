@@ -20,54 +20,26 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module draw_game_background(
+module draw_game(
     input CLK_VGA,
     input freq_20kHz,
-    
     input [11:0] VGA_HORZ_COORD,
     input [11:0] VGA_VERT_COORD,
     
-    output [3:0] VGA_game_red_back,
-    output [3:0] VGA_game_green_back,
-    output [3:0] VGA_game_blue_back,
-    
-    output [3:0] VGA_game_red_end,
-    output [3:0] VGA_game_green_end,
-    output [3:0] VGA_game_blue_end,
-    
-    output [3:0] VGA_game_red_waveform,
-    output [3:0] VGA_game_green_waveform,
-    output [3:0] VGA_game_blue_waveform,
+    output [14:0] VGA_game_end_text,
+    output [14:0] VGA_game_player,
+    output [14:0] VGA_game_cliff,
+    output [14:0] VGA_game_cloud,
     
     input [1:0] mode,
     input game_running,
     input restart,
     input start_recording,
+    input [9:0] draw_sound,
     
-    input [9:0] draw_sound
+    input [11:0] cur_volume
     );
-    
-//       reg [9:0] recorded_wave [1279:0];
-//       reg [3:0] i = 0;
-       //reg [24:0] recording_counter = 0; 
-//    always @ (posedge CLK_VGA) begin
-//        if (start_recording == 1 && i <= 1279) begin
-//            if (recording_counter[24] == 1) begin
-//                recorded_wave[i] = draw_sound;
-//                recording_counter = 0;
-//                i = i + 128;
-//            end
-//            recording_counter = recording_counter + 1;
-//        end 
-//    end
-    
-//    reg freq_slow;
-//    reg [3:0] slow_counter = 0;
-//    always @ (posedge CLK_VGA) begin
-//        slow_counter <= (slow_counter[3] == 1) ? 0: slow_counter + 1;
-//        freq_slow <= (slow_counter == 0) ? ~freq_slow : freq_slow;
-//    end
-    
+
     reg [9:0] recorded_wave [1279:0];
     reg [11:0] i = 0;
     reg [10:0] recording_counter = 0; 
@@ -85,12 +57,10 @@ module draw_game_background(
         recording_counter = recording_counter + 1;
     end
     
-    wire [11:0] temp_cur_horz;
-    assign temp_cur_horz = VGA_HORZ_COORD;
-    //assign obstacle_condition = (VGA_HORZ_COORD % 128 == 0) && (VGA_HORZ_COORD % 128 <= 75) && (VGA_VERT_COORD >= 1024 - recorded_wave[VGA_HORZ_COORD]);   
-    
     //Creates 10 bars of width 50%, determined by the horizontal coordinates, and vertical coordinates determined by recorded wave     
-    wire obstacle_condition = VGA_VERT_COORD >= 950 && (VGA_HORZ_COORD % 128 <= 100) && VGA_HORZ_COORD < 1280 && (VGA_VERT_COORD >= 1500 - recorded_wave[VGA_HORZ_COORD]);  
+    wire obstacle_condition = (VGA_HORZ_COORD >= 0 && VGA_VERT_COORD >= 180 && VGA_VERT_COORD <= 240) 
+        || VGA_VERT_COORD >= 950 || (VGA_HORZ_COORD % 128 <= 100) 
+        && VGA_HORZ_COORD < 1280 && (VGA_VERT_COORD >= 1500 - recorded_wave[VGA_HORZ_COORD]);  
     
     reg game_over = 0;
     reg game_won = 0;
@@ -105,7 +75,7 @@ module draw_game_background(
     Pixel_On_text2 #(.displayText("Oh no! You Lost!")) got (
         CLK_VGA,
         580, // text position.x (top left)
-        512, // text position.y (top left)
+        505, // text position.y (top left)
         VGA_HORZ_COORD, // current position.x
         VGA_VERT_COORD, // current position.y
         game_over_text  // result, 1 if current pixel is on text, 0 otherwise
@@ -113,21 +83,20 @@ module draw_game_background(
     wire game_won_text;
     Pixel_On_text2 #(.displayText("Congratulations! You won!")) gwt (
         CLK_VGA,
-        580, // text position.x (top left)
-        512, // text position.y (top left)
+        540, // text position.x (top left)
+        505, // text position.y (top left)
         VGA_HORZ_COORD, // current position.x
         VGA_VERT_COORD, // current position.y
         game_won_text  // result, 1 if current pixel is on text, 0 otherwise
     );
-    
-    wire text_condition;
+    wire hp_condition;
     Pixel_On_text2 #(.displayText("HP")) hp_bar_text (
         CLK_VGA,
         1090, // text position.x (top left)
         15, // text position.y (top left)
         VGA_HORZ_COORD, // current position.x
         VGA_VERT_COORD, // current position.y
-        text_condition  // result, 1 if current pixel is on text, 0 otherwise
+        hp_condition  // result, 1 if current pixel is on text, 0 otherwise
     );
     
     // Cloud movement code
@@ -190,12 +159,14 @@ module draw_game_background(
     
     // Player position and stuff
     reg [20:0] player_horz_counter = 0;
-    reg [11:0] player_horz_lower = 15;
-    reg [11:0] player_horz_upper = 35;
-    reg [11:0] player_vert_lower = 100;
-    reg [11:0] player_vert_upper = 120;    
+    reg [11:0] player_horz_lower = 5;
+    reg [11:0] player_horz_upper = 25;
+    reg [11:0] player_vert_lower = 320;
+    reg [11:0] player_vert_upper = 340;    
     // HP bar
     reg [11:0] HP = 1265;
+    reg jumped = 0;
+    reg [23:0] jump_counter = 0;
     wire inner_bar_condition = (VGA_HORZ_COORD > 1115 && VGA_HORZ_COORD < HP) && 
         (VGA_VERT_COORD > 15 && VGA_VERT_COORD < 30);
     wire outer_bar_condition = (VGA_HORZ_COORD == 1115 && (VGA_VERT_COORD >= 15 && VGA_VERT_COORD <= 30)) ||
@@ -207,72 +178,109 @@ module draw_game_background(
         (VGA_VERT_COORD > player_vert_lower && VGA_VERT_COORD < player_vert_upper); 
     always @ (posedge CLK_VGA) begin
         if (restart == 1) begin
-           player_horz_lower = 15;
-           player_horz_upper = 35;
-           player_vert_lower = 100;
-           player_vert_upper = 120;
+           player_horz_lower = 5;
+           player_horz_upper = 25;
+           player_vert_lower = 320;
+           player_vert_upper = 340;
            game_over = 0;
            game_won = 0;
            HP = 1265;
-           //recorded_wave[0] = 0;
-           //recorded_wave[128] = 0;
-           //recorded_wave[256] = 0;
-           //recorded_wave[384] = 0;
-           //recorded_wave[512] = 0;
-           //recorded_wave[640] = 0;
-           //recorded_wave[768] = 0;
-           //recorded_wave[896] = 0;
-           //recorded_wave[1024] = 0;
-           //recorded_wave[1152] = 0;
         end
         else if (mode == 1 && game_running == 1 && (game_over == 0 && game_won == 0)) begin
+            if (jumped == 1) begin
+                if (jump_counter[23] == 1) begin
+                    jumped = 0;
+                    jump_counter = 0;
+                end
+                jump_counter = jump_counter + 1;
+            end
+            else if (cur_volume >= 1024 && jumped == 0) begin
+                jumped = 1; 
+            end
+            
             if (player_horz_counter[20] == 1) begin
                 player_horz_counter = 0;
                 player_horz_lower = player_horz_lower + 1;
                 player_horz_upper = player_horz_upper + 1;
-                player_vert_lower = player_vert_lower + 6;
-                player_vert_upper = player_vert_upper + 6;
+                if (jumped == 1) begin
+                    player_vert_lower = player_vert_lower - 2;
+                    player_vert_upper = player_vert_upper - 2;
+                end
+                else begin
+                    player_vert_lower = player_vert_lower + 1;
+                    player_vert_upper = player_vert_upper + 1;
+                end  
             end
             player_horz_counter = player_horz_counter + 1;
             
             if (player_condition & obstacle_condition == 1) begin
-                HP = HP - 30;
+                HP = HP - 50;
                 if (HP <= 1116) begin
                      game_over = 1;     
                 end
-                player_horz_lower = 15;
-                player_horz_upper = 35;
-                player_vert_lower = 100;
-                player_vert_upper = 120;
+                player_horz_lower = 5;
+                player_horz_upper = 25;
+                player_vert_lower = 320;
+                player_vert_upper = 340;
             end
             else if (player_condition & game_end_condition == 1) begin
                 game_won = 1;
             end
         end
     end
-  
-    // Final game output channels
-    assign VGA_game_red_back = text_condition ? 4'hF : (player_condition ? 4'hF :
-        (final_cloud_condition ? 4'he : 
-            (inner_bar_condition ? 4'h0 : 
-                (outer_bar_condition ? 4'hF : 4'h4))));
-    assign VGA_game_green_back = text_condition ? 4'hF : (player_condition ? 4'h0 :
-        (final_cloud_condition ? 4'he : 
-            (inner_bar_condition ? 4'hF : 
-                (outer_bar_condition ? 4'hF : 4'h9))));
-    assign VGA_game_blue_back = text_condition ? 4'hF : (player_condition ? 4'h0 :
-        (final_cloud_condition ? 4'he : 
-            (inner_bar_condition ? 4'h0 : 
-                (outer_bar_condition ? 4'hF : 4'hD))));
-                    
-    assign VGA_game_red_end = (game_won == 1) ? (game_won_text ? 4'hF : (game_dialog_condition ? 4'h9 : (game_dialog_outline ? 4'hF : 0))) : 
-        (game_over == 1) ? (game_over_text ? 4'hF : (game_dialog_condition ? 4'h9 : (game_dialog_outline ? 4'hF : 0))) : 0;
-    assign VGA_game_green_end = (game_won == 1) ? (game_won_text ? 4'hF : (game_dialog_condition ? 4'h9 : (game_dialog_outline ? 4'hF : 0))) : 
-        (game_over == 1) ? (game_over_text ? 4'hF : (game_dialog_condition ? 4'h9 : (game_dialog_outline ? 4'hF : 0))) : 0;
-    assign VGA_game_blue_end = (game_won == 1) ? (game_won_text ? 4'hF : (game_dialog_condition ? 4'h9 : (game_dialog_outline ? 4'hF : 0))) : 
-        (game_over == 1) ? (game_over_text ? 4'hF : (game_dialog_condition ? 4'h9 : (game_dialog_outline ? 4'hF : 0))) : 0;                 
     
-    assign VGA_game_red_waveform = obstacle_condition ? 4'hE : 0;
-    assign VGA_game_green_waveform = obstacle_condition ? 4'h5 : 0;
-    assign VGA_game_blue_waveform = obstacle_condition ? 4'h3 : 0;
+    assign VGA_game_end_text[4:0] = hp_condition ? {1'b1, 4'hF}
+        : inner_bar_condition ? {1'b1, 4'h0}
+        : outer_bar_condition ? {1'b1, 4'hF}
+        : (game_won == 1) ?
+           (game_won_text ? {1'b1, 4'hF}
+           : game_dialog_condition ? {1'b1, 4'h0}
+           : game_dialog_outline ? {1'b1, 4'hF}
+           : {1'b0, 4'h0})
+        : (game_over == 1) ?
+            (game_over_text ? {1'b1, 4'hF}
+            : game_dialog_condition ? {1'b1, 4'h0}
+            : game_dialog_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        : {1'b0, 4'h0};   
+    assign VGA_game_end_text[9:5] = hp_condition ? {1'b1, 4'hF}
+        : inner_bar_condition ? {1'b1, 4'hF}
+        : outer_bar_condition ? {1'b1, 4'hF}
+        : (game_won == 1) ?
+           (game_won_text ? {1'b1, 4'hF}
+           : game_dialog_condition ? {1'b1, 4'h0}
+           : game_dialog_outline ? {1'b1, 4'hF}
+           : {1'b0, 4'h0})
+        : (game_over == 1) ?
+            (game_over_text ? {1'b1, 4'hF}
+            : game_dialog_condition ? {1'b1, 4'h0}
+            : game_dialog_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        : {1'b0, 4'h0};
+    assign VGA_game_end_text[14:10] = hp_condition ? {1'b1, 4'hF}
+        : inner_bar_condition ? {1'b1, 4'h0}
+        : outer_bar_condition ? {1'b1, 4'hF}
+        : (game_won == 1) ?
+           (game_won_text ? {1'b1, 4'hF}
+           : game_dialog_condition ? {1'b1, 4'h0}
+           : game_dialog_outline ? {1'b1, 4'hF}
+           : {1'b0, 4'h0})
+        : (game_over == 1) ?
+            (game_over_text ? {1'b1, 4'hF}
+            : game_dialog_condition ? {1'b1, 4'h0}
+            : game_dialog_outline ? {1'b1, 4'hF}
+            : {1'b0, 4'h0})
+        : {1'b0, 4'h0};
+    
+    assign VGA_game_player[4:0] = player_condition ? {1'b1, 4'hF} : {1'b0, 4'h0};
+    assign VGA_game_player[9:5] = player_condition ? {1'b1, 4'h0} : {1'b0, 4'h0};
+    assign VGA_game_player[14:10] = player_condition ? {1'b1, 4'h0} : {1'b0, 4'h0};
+    
+    assign VGA_game_cliff[4:0] = obstacle_condition ? {1'b1, 4'hb} : {1'b0, 4'h0};
+    assign VGA_game_cliff[9:5] = obstacle_condition ? {1'b1, 4'h6} : {1'b0, 4'h0};
+    assign VGA_game_cliff[14:10] = obstacle_condition ? {1'b1, 4'h2} : {1'b0, 4'h0};
+    
+    assign VGA_game_cloud[4:0] = final_cloud_condition ? {1'b1, 4'hF} : {1'b0, 4'h0};
+    assign VGA_game_cloud[9:5] = final_cloud_condition ? {1'b1, 4'hF} : {1'b0, 4'h0};
+    assign VGA_game_cloud[14:10] = final_cloud_condition ? {1'b1, 4'hF} : {1'b0, 4'h0};
 endmodule
