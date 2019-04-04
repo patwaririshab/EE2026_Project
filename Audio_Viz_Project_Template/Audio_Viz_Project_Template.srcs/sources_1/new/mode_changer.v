@@ -32,11 +32,10 @@ module mode_changer(
             mode = mode + 1;
         end
         else if (down_button_out == 1 && up_button_out == 0) begin
-            mode = mode - 1;
+            mode = (mode > 0) ? mode - 1 : 2;
         end
         
-        if (mode == 2) mode = 0;
-        if (mode == 3) mode = 1;
+        if (mode == 3) mode = 0;
         
     end
 endmodule

@@ -46,6 +46,9 @@ read_verilog -library xil_defaultlib {
   {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/mode_changer.v}
   {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v}
   {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_game_background.v}
+  {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/moving_av_filter.v}
+  {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_100kHz.v}
+  {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/bar_visualization.v}
 }
 read_vhdl -library xil_defaultlib {
   {D:/Raghav Stuff/Google Drive/Work/NUS/Sem 2/EE2026/Labs/EE2026_Project/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd}

@@ -16,6 +16,7 @@ module Voice_Scope_TOP(
     input tick_switch,
     input axes_switch,
     input wave_switch,
+    input noise_switch,
     
     input middle_button,
     input left_button,
@@ -39,17 +40,20 @@ module Voice_Scope_TOP(
     );
     
     // 20 KILO Hz clock divider
-    wire freq_20hz;
-    clk_div my_20khz (CLK, freq_20hz);
-    
+    wire freq_20kHz;
+    wire freq_100kHz;
+    clk_div my_20khz (CLK, freq_20kHz);
+    clk_div_100kHz my_100kHz (CLK,freq_100kHz);
     // Used to store 12-bit mic inputs.
     wire [11:0] sound_sample;
     wire [11:0] block_sample;
+    wire [11:0] nc_sound_sample;
     
     // Generates actual mic waveform
-    Voice_Capturer vc1 (CLK, freq_20hz,J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4,sound_sample);
+    Voice_Capturer vc1 (CLK, freq_20kHz,J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, sound_sample);
     // Controls LED Indicator
     Volume_Indicator vi (CLK, sound_sample, block_sample, an, seg);
+    moving_av_filter maf (freq_20kHz, sound_sample, nc_sound_sample);
     assign led[11:0] = block_sample[11:0];
     
     // Single pulse button handling
@@ -79,22 +83,21 @@ module Voice_Scope_TOP(
         cur_theme_grid, cur_theme_tick, cur_theme_background, mode);
     
     
-    
     // Generates test waveform 
     wire [9:0] wave_sample; 
-    TestWave_Gen tvg (freq_20hz, wave_sample, sound_sample, pause_switch, mode);
+    TestWave_Gen tvg (freq_20kHz, wave_sample, sound_sample, pause_switch, mode);
     // Controls whether the test waveform or actual waveform is drawn.
     wire [9:0] draw_sound;
-    assign draw_sound[9:0] = (switch) ? sound_sample[11:2] : wave_sample[9:0];
+    assign draw_sound[9:0] = (switch) ? (noise_switch) ? nc_sound_sample[11:2] : sound_sample[11:2] : wave_sample[9:0];
     
-    /* MODE 1 - WAVEFORM */
+    /* MODE 0 - WAVEFORM */
     // Draws background
     wire [11:0] VGA_HORZ_COORD;
     wire [11:0] VGA_VERT_COORD;     
     wire [3:0] VGA_Red_waveform;
     wire [3:0] VGA_Green_waveform;
     wire [3:0] VGA_Blue_waveform;
-    Draw_Waveform dw1 (freq_20hz, draw_sound, VGA_HORZ_COORD, VGA_VERT_COORD, 
+    Draw_Waveform dw1 (freq_20kHz, draw_sound, VGA_HORZ_COORD, VGA_VERT_COORD, 
         VGA_Red_waveform, VGA_Green_waveform, VGA_Blue_waveform, wave_switch,
         pause_switch, cur_theme_wave, cur_theme_background); 
     // Draws background
@@ -113,23 +116,43 @@ module Voice_Scope_TOP(
         VGA_HORZ_COORD, VGA_VERT_COORD, middle_button_out,
         cur_theme_wave, cur_theme_background, mode);
     
-    /* MODE 2 - GAME */
-    wire [3:0] VGA_game_red_back;
-    wire [3:0] VGA_game_green_back;
-    wire [3:0] VGA_game_blue_back;
-    draw_game_background dgb (CLK_VGA, VGA_HORZ_COORD, VGA_VERT_COORD,
-        VGA_game_red_back, VGA_game_green_back, VGA_game_blue_back);
-    // Module with info text
+    /* MODE 1 - GAME */
+    wire game_running;
+    wire restart;
+    wire start_recording;
+    // Draws game text
     wire [3:0] VGA_game_red_text;
     wire [3:0] VGA_game_green_text;
     wire [3:0] VGA_game_blue_text;
     game_record_text grt (CLK_VGA, button_clock, VGA_HORZ_COORD, VGA_VERT_COORD,
-        VGA_game_red_text, VGA_game_green_text, VGA_game_blue_text, middle_button_out, mode);
+        VGA_game_red_text, VGA_game_green_text, VGA_game_blue_text, middle_button_out, 
+        left_button_out, right_button_out, mode, game_running, restart, start_recording);
+    wire [3:0] VGA_game_red_back;
+    wire [3:0] VGA_game_green_back;
+    wire [3:0] VGA_game_blue_back;
+    wire [3:0] VGA_game_red_end;
+    wire [3:0] VGA_game_green_end;
+    wire [3:0] VGA_game_blue_end;
+    wire [3:0] VGA_game_red_waveform;
+    wire [3:0] VGA_game_green_waveform;
+    wire [3:0] VGA_game_blue_waveform;
+    draw_game_background dgb (CLK_VGA, freq_20kHz, VGA_HORZ_COORD, VGA_VERT_COORD,
+        VGA_game_red_back, VGA_game_green_back, VGA_game_blue_back, 
+        VGA_game_red_end, VGA_game_green_end, VGA_game_blue_end,
+        VGA_game_red_waveform, VGA_game_green_waveform, VGA_game_blue_waveform,
+        mode, game_running, restart, start_recording, nc_sound_sample);
+    // Module with info text
+    
     // Module with background including HP bar, ball, 
     // Module with waveform being drawn to show recording being done
     // Module with volume indicator to show how high you can jump
     
-    /* MODE 3 - MUSIC VISUALISER WITH AUTO GAIN?! IDK */
+    /* MODE 2 - MUSIC VISUALISER WITH AUTO GAIN?! IDK */
+    wire [3:0] VGA_red_visualize;
+    wire [3:0] VGA_green_visualize;
+    wire [3:0] VGA_blue_visualize;
+    
+    bar_visualization br (freq_20kHz, pause_switch, VGA_HORZ_COORD, VGA_VERT_COORD, nc_sound_sample, VGA_red_visualize, VGA_green_visualize, VGA_blue_visualize);
     
     // Do not touch - VGA controller    
     VGA_DISPLAY (CLK, VGA_Red_waveform, VGA_Green_waveform, VGA_Blue_waveform, 
@@ -138,5 +161,8 @@ module Voice_Scope_TOP(
         VGA_HORZ_COORD, VGA_VERT_COORD, 
         VGA_RED, VGA_GREEN, VGA_BLUE, VGA_VS, VGA_HS, CLK_VGA, mode,
         VGA_game_red_back, VGA_game_green_back, VGA_game_blue_back,
-        VGA_game_red_text, VGA_game_green_text, VGA_game_blue_text);                  
+        VGA_game_red_text, VGA_game_green_text, VGA_game_blue_text,
+        VGA_game_red_end, VGA_game_green_end, VGA_game_blue_end,
+        VGA_game_red_waveform, VGA_game_green_waveform, VGA_game_blue_waveform,
+        VGA_red_visualize, VGA_green_visualize, VGA_blue_visualize );                  
 endmodule

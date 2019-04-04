@@ -32,30 +32,94 @@ module game_record_text(
     output [3:0] VGA_game_blue_text, 
     
     input middle_button_out,
-    input [1:0] mode
-    );
+    input left_button_out,
+    input right_button_out,
+    input [1:0] mode,
     
-    reg [11:0] recorded_wave [1279:0];
+    output reg game_running = 0,
+    output reg restart = 0,
+    output reg start_recording = 0
+    );
     
     wire final_condition;
     wire recording_ins_text;
     wire recording_status_text;
+    wire proceed_text;
+    wire recording_completed_text;
+    wire escape_text;
+    
     reg recording = 0;
+    reg recorded = 0;
+    reg [8:0] recording_counter = 0;
     always @ (posedge button_clock) begin
         if (mode == 1) begin
-            if (middle_button_out == 1) begin
-                recording = recording + 1;
+            if (middle_button_out == 1 && recorded == 1) begin
+                game_running = 1;
+                recording = 0;
+                recorded = 0;
+                restart = 0;
             end
-            
-            if (recording == 1) begin
+            else if (middle_button_out == 1 && game_running == 1) begin
+                game_running = 0;
+                recording = 0;
+                recorded = 0;
+                restart = 1;
+            end
+            else if (middle_button_out == 1 && recording == 0 && recorded == 0 && game_running == 0) begin
+                recording = 1;
+                restart = 0;
+            end
+            else if (recording == 1) begin
                 // Code to record data into array stored here.
+                start_recording = 1;
+                if (recording_counter[8] == 1) begin
+                    recording = 0;
+                    recorded = 1;
+                    recording_counter = 0;
+                    start_recording = 0;
+                end
+                recording_counter = recording_counter + 1;
             end
         end
     end
+    // Once recording is started, this block below runs.
     
-    assign final_condition = (recording == 0) ? recording_ins_text : (recording_ins_text || recording_status_text);
+    wire dialog_box_condition = (VGA_HORZ_COORD > 5 && VGA_HORZ_COORD < 350) && (VGA_VERT_COORD > 5 && VGA_VERT_COORD < 55);
+    wire dialog_box_edge_condition = (VGA_HORZ_COORD == 5 && (VGA_VERT_COORD >= 5 && VGA_VERT_COORD <= 55)) ||
+        (VGA_HORZ_COORD == 350 && (VGA_VERT_COORD >= 5 && VGA_VERT_COORD <= 55)) ||
+        (VGA_VERT_COORD == 5 && (VGA_HORZ_COORD >= 5 && VGA_HORZ_COORD <= 350)) ||
+        (VGA_VERT_COORD == 55 && (VGA_HORZ_COORD >= 5 && VGA_HORZ_COORD <= 350));
     
-    Pixel_On_text2 #(.displayText("Press middle button to toggle recording")) record_ins (
+    assign final_condition = (game_running == 0) ? ((recorded == 0) ? ((recording == 0) ? recording_ins_text : (recording_ins_text || recording_status_text)) 
+        : (proceed_text || recording_completed_text)) : escape_text;
+    
+    Pixel_On_text2 #(.displayText("Press middle button to restart")) escape (
+        CLK_VGA,
+        15, // text position.x (top left)
+        15, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        escape_text  // result, 1 if current pixel is on text, 0 otherwise
+    );
+    
+    Pixel_On_text2 #(.displayText("Press middle button to proceed")) proceed (
+        CLK_VGA,
+        15, // text position.x (top left)
+        30, // text position.y (top left)
+        VGA_HORZ_COORD, // current position.x
+        VGA_VERT_COORD, // current position.y
+        proceed_text  // result, 1 if current pixel is on text, 0 otherwise
+    );
+    Pixel_On_text2 #(.displayText("Recording completed")) record_completed (
+       CLK_VGA,
+       15, // text position.x (top left)
+       15, // text position.y (top left)
+       VGA_HORZ_COORD, // current position.x
+       VGA_VERT_COORD, // current position.y
+       recording_completed_text  // result, 1 if current pixel is on text, 0 otherwise
+   );
+
+    Pixel_On_text2 #(.displayText("Press middle button to start recording")) record_ins (
         CLK_VGA,
         15, // text position.x (top left)
         15, // text position.y (top left)
@@ -65,14 +129,14 @@ module game_record_text(
     );
     Pixel_On_text2 #(.displayText("Recording...")) record_status (
         CLK_VGA,
-        1000, // text position.x (top left)
-        1000, // text position.y (top left)
+        15, // text position.x (top left)
+        30, // text position.y (top left)
         VGA_HORZ_COORD, // current position.x
         VGA_VERT_COORD, // current position.y
         recording_status_text  // result, 1 if current pixel is on text, 0 otherwise
     );
     
-    assign VGA_game_red_text = final_condition ? 4'hF : 0;
-    assign VGA_game_green_text = final_condition ? 4'hF : 0;
-    assign VGA_game_blue_text = final_condition ? 4'hF : 0;
+    assign VGA_game_red_text = final_condition ? 4'hF : (dialog_box_condition ? 4'h9 : (dialog_box_edge_condition ? 4'hF : 0));
+    assign VGA_game_green_text = final_condition ? 4'hF : (dialog_box_condition ? 4'h9 : (dialog_box_edge_condition ? 4'hF : 0));
+    assign VGA_game_blue_text = final_condition ? 4'hF : (dialog_box_condition ? 4'h9 : (dialog_box_edge_condition ? 4'hF : 0));
 endmodule

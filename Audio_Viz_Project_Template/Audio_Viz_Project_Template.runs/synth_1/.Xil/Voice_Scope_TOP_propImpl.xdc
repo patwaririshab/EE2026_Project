@@ -9,6 +9,8 @@ set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN W16 [get_ports axes_switch]
 set_property src_info {type:XDC file:1 line:18 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W17 [get_ports tick_switch]
+set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U1 [get_ports {noise_switch}]
 set_property src_info {type:XDC file:1 line:40 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T1 [get_ports pause_switch]
 set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
