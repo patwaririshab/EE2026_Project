@@ -1,0 +1,271 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Apr  6 21:10:36 2019
+# Process ID: 812
+# Current directory: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11772 C:\Users\Raghav Bhardwaj\Desktop\Audio_Viz_Project_Template\Audio_Viz_Project_Template.xpr
+# Log file: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/vivado.log
+# Journal file: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 882.316 ; gain = 175.988
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/noise_cancelling_filter.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/noise_cancelling_filter.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/average_amplifier.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/average_amplifier.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_waveform.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_waveform.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_text.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_text.v}}
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 22:12:33 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 22:12:33 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 22:14:01 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 22:14:01 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/my_1525kHz.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/my_1525kHz.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_1525kHz.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_1525kHz.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/FLICKER_ANODE.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/FLICKER_ANODE.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/SEGMENT_DISP.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/SEGMENT_DISP.v}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 22:18:41 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 22:18:41 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713888A
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183713888A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713888A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 22:40:58 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 22:40:58 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 23:15:04 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 23:15:04 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 23:19:15 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 23:19:15 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 23:25:39 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 23:25:39 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 23:27:37 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 23:27:37 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183713888A
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183713888A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713888A
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Sat Apr  6 23:38:25 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 23:39:49 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 23:39:49 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  6 23:46:55 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/synth_1/runme.log
+[Sat Apr  6 23:46:55 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+archive_project {C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr.zip} -temp_dir {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/.Xil/Vivado-812-RaghavDesktop} -force -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/.Xil/Vivado-812-RaghavDesktop' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/.Xil/Vivado-812-RaghavDesktop/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'

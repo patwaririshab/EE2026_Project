@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Apr  6 21:10:36 2019
+# Process ID: 812
+# Current directory: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11772 C:\Users\Raghav Bhardwaj\Desktop\Audio_Viz_Project_Template\Audio_Viz_Project_Template.xpr
+# Log file: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/vivado.log
+# Journal file: C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/noise_cancelling_filter.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/noise_cancelling_filter.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/average_amplifier.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/average_amplifier.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_waveform.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_waveform.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_text.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_text.v}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/my_1525kHz.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/my_1525kHz.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_1525kHz.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_1525kHz.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/FLICKER_ANODE.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/FLICKER_ANODE.v}}
+close [ open {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/SEGMENT_DISP.v} w ]
+add_files {{C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.srcs/sources_1/new/SEGMENT_DISP.v}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+archive_project {C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr.zip} -temp_dir {C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/.Xil/Vivado-812-RaghavDesktop} -force -include_local_ip_cache -include_config_settings

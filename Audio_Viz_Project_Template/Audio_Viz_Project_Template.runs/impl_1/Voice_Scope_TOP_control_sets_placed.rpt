@@ -1,0 +1,441 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Apr  6 23:57:43 2019
+| Host         : RaghavDesktop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Voice_Scope_TOP_control_sets_placed.rpt
+| Design       : Voice_Scope_TOP
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   373 |
+| Unused register locations in slices containing registers |   152 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            6 |
+|     10 |            7 |
+|     12 |            3 |
+|     14 |            1 |
+|    16+ |          356 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             852 |          202 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             504 |          128 |
+| Yes          | No                    | No                     |             374 |           73 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             558 |          106 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------------+--------------------------------------------------------+----------------------------------------------+------------------+----------------+
+|                     Clock Signal                    |                      Enable Signal                     |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
++-----------------------------------------------------+--------------------------------------------------------+----------------------------------------------+------------------+----------------+
+|  J_MIC3_Pin1_OBUF_BUFG                              |                                                        | fc/fa/an_counter[3]_i_1_n_0                  |                1 |              8 |
+|  button_clock_BUFG                                  | mc/theme_counter_reg[0]                                | ts/cur_theme_tick[4]_i_1_n_0                 |                3 |              8 |
+|  button_clock_BUFG                                  | mc/theme_counter_reg[0]                                | ts/cur_theme_axes[2]_i_1_n_0                 |                2 |              8 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/fa//i__n_0                                          |                                              |                1 |              8 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/fa/seg_reg[5]_0                                     | fc/sd/p_0_out[5]                             |                3 |              8 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b4_pos[21]_i_2_n_0                            | my_balls/b4_pos[21]_i_1_n_0                  |                2 |              8 |
+|  vi/ssd/p_0_in                                      |                                                        | vi/ssd/count                                 |                2 |             10 |
+|  vi/ssd/p_0_in                                      |                                                        |                                              |                2 |             10 |
+|  counter_reg[24]                                    | vi/ssd/p_1_in[6]                                       | vi/ssd/status1[6]_i_1_n_0                    |                3 |             10 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b3_pos[20]_i_1_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                2 |             10 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b1_pos[21]_i_2_n_0                            | my_balls/b1_pos[21]_i_1_n_0                  |                4 |             10 |
+|  button_clock_BUFG                                  | mc/theme_counter_reg[0]                                | ts/cur_theme_tick[0]_i_1_n_0                 |                2 |             10 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b2_pos[20]_i_1_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                2 |             10 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b1_pos[19]_i_1_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                2 |             12 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b2_pos[21]_i_2_n_0                            | my_balls/p_1_in[21]                          |                3 |             12 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b3_pos[21]_i_2_n_0                            | my_balls/b3_pos[21]_i_1_n_0                  |                5 |             12 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b4_pos[20]_i_2_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                4 |             14 |
+|  button_clock_BUFG                                  | mc/theme_counter_reg[0]                                | ts/cur_theme_wave[4]_i_1_n_0                 |                6 |             16 |
+|  J_MIC3_Pin1_OBUF_BUFG                              |                                                        | ncf/i[9]_i_1_n_0                             |                2 |             18 |
+|  J_MIC3_Pin1_OBUF_BUFG                              |                                                        | ncf/j[9]_i_1_n_0                             |                3 |             18 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | bar/cur_output_reg[11]_0                               |                                              |                6 |             20 |
+|  button_clock_BUFG                                  | grt/recording_counter[8]_i_1__0_n_0                    |                                              |                3 |             20 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | mc/E[0]                                                |                                              |                4 |             20 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b1_pos[21]_i_2_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                3 |             22 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b2_pos[21]_i_2_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                3 |             22 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b4_pos[21]_i_2_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                4 |             22 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/p_0_in__1                                  |                                              |                4 |             22 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | grt/i                                                  | dgb/i[11]_i_1_n_0                            |                4 |             22 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | my_balls/b3_pos[21]_i_2_n_0                            | my_balls/b4_pos[20]_i_1_n_0                  |                5 |             22 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/HP_reg[11]_2                                       | grt/restart                                  |                3 |             22 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep |                                                        | nolabel_line193/VGA_CONTROL/VGA_RED_reg[3]_4 |               11 |             24 |
+| ~vc1/J_MIC3_Pin4_OBUF                               |                                                        |                                              |                5 |             24 |
+|  CLK_IBUF_BUFG                                      |                                                        | J_MIC3_Pin1_OBUF_BUFG                        |                3 |             24 |
+|  CLK_IBUF_BUFG                                      | vi/max_value0                                          | counter_reg[24]                              |                4 |             24 |
+|  CLK_IBUF_BUFG                                      |                                                        | my_20khz/counter[12]_i_1_n_0                 |                3 |             24 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | ncf/filtered_output[11]_i_1_n_0                        |                                              |                5 |             24 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_448_511_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_512_575_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_384_447_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_576_639_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_64_127_0_2_i_1_n_0               |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_832_895_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_768_831_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_960_1023_0_2_i_1_n_0             |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_704_767_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_896_959_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_1216_1279_0_2_i_1__0_n_0 |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_192_255_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_256_319_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_1088_1151_0_2_i_1__0_n_0 |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_1024_1087_0_2_i_1_n_0    |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_960_1023_0_2_i_1_n_0             |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_832_895_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_768_831_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_896_959_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_0_63_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_192_255_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_1088_1151_0_2_i_1_n_0       |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_128_191_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_1216_1279_0_2_i_1_n_0       |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_1024_1087_0_2_i_1_n_0       |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_1152_1215_0_2_i_1_n_0       |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_256_319_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_384_447_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_512_575_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_576_639_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_448_511_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_320_383_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_832_895_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_704_767_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_640_703_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_64_127_0_2_i_1_n_0          |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_896_959_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_768_831_0_2_i_1_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | my_balls/sample_memory_reg_960_1023_0_2_i_1_n_0        |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_1024_1087_0_2_i_1__0_n_0         |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_1088_1151_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_1152_1215_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_1216_1279_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_128_191_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_192_255_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_256_319_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_320_383_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_384_447_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_448_511_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_576_639_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_512_575_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_448_511_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_640_703_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_704_767_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_0_63_0_2_i_4_n_0                 |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_512_575_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_0_63_0_2_i_1__0_n_0      |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_1152_1215_0_2_i_1__0_n_0 |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_1024_1087_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_128_191_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_0_63_0_2_i_1_n_0                 |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_1088_1151_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_128_191_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_320_383_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_1216_1279_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dfw/Sample_Memory_reg_64_127_0_2_i_1_n_0               |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_192_255_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_1152_1215_0_2_i_1_n_0            |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_256_319_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/recorded_wave_reg_640_703_0_2_i_1_n_0              |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_768_831_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_896_959_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_704_767_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_960_1023_0_2_i_1__0_n_0  |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_64_127_0_2_i_1__0_n_0    |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_832_895_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_576_639_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_320_383_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_640_703_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | dw_mode_one/Sample_Memory_reg_384_447_0_2_i_1__0_n_0   |                                              |                4 |             28 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | nolabel_line193/VGA_CONTROL/clear                      | nolabel_line193/VGA_CONTROL/v_cntr_reg0      |                9 |             30 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9600_9663_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9920_9983_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9728_9791_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9792_9855_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9856_9919_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9984_10047_0_2_i_1_n_0     |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4416_4479_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/p_2_in                                              | fc/time_counter[15]_i_1_n_0                  |                5 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8128_8191_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4224_4287_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4288_4351_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4352_4415_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4480_4543_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_0_63_0_2_i_1_n_0           |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1024_1087_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1088_1151_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1152_1215_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1216_1279_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1280_1343_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_128_191_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1472_1535_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1344_1407_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1536_1599_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1408_1471_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1600_1663_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1728_1791_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1664_1727_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1856_1919_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1792_1855_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2112_2175_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1920_1983_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_192_255_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2048_2111_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_1984_2047_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2240_2303_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2304_2367_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2368_2431_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2176_2239_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2432_2495_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_256_319_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2496_2559_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2560_2623_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2624_2687_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2880_2943_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2752_2815_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2816_2879_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2944_3007_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_2688_2751_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3136_3199_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3072_3135_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_320_383_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3200_3263_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3008_3071_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3264_3327_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3520_3583_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3328_3391_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3456_3519_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3392_3455_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3840_3903_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3712_3775_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3584_3647_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3776_3839_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3648_3711_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_384_447_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3904_3967_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_3968_4031_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4032_4095_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4096_4159_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4160_4223_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5760_5823_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/min_counter                                         | fc/i_max[15]_i_1_n_0                         |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/i_max                                               | fc/i_max[15]_i_1_n_0                         |                3 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/max_counter                                         | fc/i_max[15]_i_1_n_0                         |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4544_4607_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_448_511_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4608_4671_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4672_4735_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4864_4927_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4736_4799_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4800_4863_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4928_4991_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_4992_5055_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5120_5183_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5184_5247_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5056_5119_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_512_575_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5248_5311_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5568_5631_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5440_5503_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5312_5375_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5376_5439_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5504_5567_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_576_639_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5696_5759_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5632_5695_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5824_5887_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5952_6015_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_5888_5951_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6016_6079_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6080_6143_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6144_6207_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6208_6271_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6336_6399_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6272_6335_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6400_6463_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6464_6527_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_64_127_0_2_i_1_n_0         |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6592_6655_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_640_703_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6528_6591_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6912_6975_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6848_6911_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6720_6783_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6784_6847_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6656_6719_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7104_7167_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7168_7231_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_704_767_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_6976_7039_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7040_7103_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7296_7359_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7232_7295_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7424_7487_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7488_7551_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7360_7423_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_768_831_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7616_7679_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7552_7615_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7680_7743_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7808_7871_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7872_7935_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7744_7807_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_7936_7999_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8000_8063_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8064_8127_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8256_8319_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8320_8383_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8192_8255_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8576_8639_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8384_8447_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8448_8511_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_832_895_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8512_8575_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8704_8767_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8832_8895_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8768_8831_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8640_8703_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8896_8959_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_896_959_0_2_i_1_n_0        |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9024_9087_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9152_9215_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9088_9151_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_8960_9023_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9280_9343_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9408_9471_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9344_9407_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9216_9279_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9536_9599_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_960_1023_0_2_i_1_n_0       |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9664_9727_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_r2_9472_9535_0_2_i_1_n_0      |                                              |                4 |             32 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/i_max[15]_i_1_n_0                                   |                                              |                5 |             34 |
+|  button_clock_BUFG                                  |                                                        |                                              |               13 |             40 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/jumped6_out                                        |                                              |                7 |             44 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/jump_counter[0]_i_1_n_0                            |                                              |                6 |             48 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_0_15_0_0_i_1_n_0              |                                              |                7 |             48 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_0_15_0_0__0_i_1_n_0           |                                              |                7 |             48 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | mc/cloud_move_counter_reg[24]                          |                                              |                7 |             50 |
+|  CLK_IBUF_BUFG                                      |                                                        | counter_reg[24]                              |                7 |             50 |
+|  J_MIC3_Pin1_OBUF_BUFG                              |                                                        | ncf/filtered_output[11]_i_1_n_0              |                7 |             52 |
+|  counter_reg[24]                                    |                                                        |                                              |               26 |             62 |
+|  CLK_IBUF_BUFG                                      |                                                        |                                              |               15 |             84 |
+|  button_clock_BUFG                                  | mc/theme_counter_reg[0]                                |                                              |               25 |             84 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_512_639_0_0_i_1_n_0           |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4096_4223_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3968_4095_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4224_4351_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4352_4479_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4480_4607_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4608_4735_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4736_4863_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4864_4991_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_4992_5119_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5248_5375_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5120_5247_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5376_5503_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5504_5631_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5632_5759_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9856_9983_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9728_9855_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9600_9727_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9216_9343_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9344_9471_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9472_9599_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_9088_9215_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_896_1023_0_0_i_1_n_0          |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8832_8959_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8704_8831_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8960_9087_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8576_8703_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8448_8575_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8320_8447_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8192_8319_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_8064_8191_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7936_8063_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7808_7935_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_768_895_0_0_i_1_n_0           |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7680_7807_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7552_7679_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5760_5887_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7296_7423_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7424_7551_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6016_6143_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_5888_6015_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_0_127_0_0_i_1_n_0             |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1024_1151_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1152_1279_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1280_1407_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1408_1535_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1536_1663_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_128_255_0_0_i_1_n_0           |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1664_1791_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1792_1919_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_1920_2047_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2048_2175_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2176_2303_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2432_2559_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2304_2431_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2560_2687_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_256_383_0_0_i_1_n_0           |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2944_3071_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2816_2943_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7168_7295_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_2688_2815_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3072_3199_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3200_3327_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3328_3455_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6912_7039_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_7040_7167_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3712_3839_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6784_6911_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6656_6783_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep | dgb/player_vert_upper[0]_i_2_n_0                       | grt/player_horz_lower_reg[0]                 |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6400_6527_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3456_3583_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6528_6655_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3840_3967_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_640_767_0_0_i_1_n_0           |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6272_6399_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_6144_6271_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_384_511_0_0_i_1_n_0           |                                              |               12 |             96 |
+|  J_MIC3_Pin1_OBUF_BUFG                              | fc/one_second_record_reg_3584_3711_0_0_i_1_n_0         |                                              |               12 |             96 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep |                                                        | nolabel_line193/VGA_CONTROL/clear            |               37 |            122 |
+|  J_MIC3_Pin1_OBUF_BUFG                              |                                                        | fc/i[0]_i_1__1_n_0                           |               52 |            154 |
+|  J_MIC3_Pin1_OBUF_BUFG                              |                                                        |                                              |               62 |            228 |
+|  nolabel_line193/VGA_CLK_108M/h_cntr_reg_reg[9]_rep |                                                        |                                              |               79 |            404 |
++-----------------------------------------------------+--------------------------------------------------------+----------------------------------------------+------------------+----------------+
+
+

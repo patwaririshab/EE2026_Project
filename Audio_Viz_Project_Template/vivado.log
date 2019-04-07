@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Apr  7 13:20:26 2019
+# Process ID: 12728
+# Current directory: C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9192 C:\Users\Raghav Bhardwaj\Desktop\Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr\Audio_Viz_Project_Template\Audio_Viz_Project_Template.xpr
+# Log file: C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template/vivado.log
+# Journal file: C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Raghav Bhardwaj/Desktop/Audio_Viz_Project_Template/.Xil/Vivado-812-RaghavDesktop/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713888A
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Raghav Bhardwaj/Desktop/Thursday_Raghav_Bhardwaj_A0184445Y_A0184456W_Archive.xpr/Audio_Viz_Project_Template/Audio_Viz_Project_Template.runs/impl_1/Voice_Scope_TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  7 16:52:19 2019...

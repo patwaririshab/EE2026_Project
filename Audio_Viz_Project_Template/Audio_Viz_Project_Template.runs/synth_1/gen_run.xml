@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1554565615">
+  <File Type="PA-TCL" Name="Voice_Scope_TOP.tcl"/>
+  <File Type="REPORTS-TCL" Name="Voice_Scope_TOP_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Voice_Scope_TOP.vds"/>
+  <File Type="RDS-UTIL" Name="Voice_Scope_TOP_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Voice_Scope_TOP_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Voice_Scope_TOP.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/VGA_CONTROL.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/sources_1/new/VGA_CONTROL.vhd"/>
+        <Attr Name="ImportTime" Val="1537517962"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/CLK_108M.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/sources_1/new/CLK_108M.vhd"/>
+        <Attr Name="ImportTime" Val="1537517914"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/VOICE_CAPTURER.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/sources_1/new/VOICE_CAPTURER.v"/>
+        <Attr Name="ImportTime" Val="1537514638"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/VGA_DISPLAY.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/sources_1/new/VGA_DISPLAY.v"/>
+        <Attr Name="ImportTime" Val="1537516892"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Draw_Waveform.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/sources_1/new/Draw_Waveform.v"/>
+        <Attr Name="ImportTime" Val="1538128550"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Voice_Scope_TOP.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/sources_1/new/Voice_Scope_TOP.v"/>
+        <Attr Name="ImportTime" Val="1538128554"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Voice_Scope_Project_Template/archive_project_summary.txt">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM2/Project/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/archive_project_summary.txt"/>
+        <Attr Name="ImportTime" Val="1538906676"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_div.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v"/>
+        <Attr Name="ImportTime" Val="1552548208"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TestWave_Gen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Volume_Indicator.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/Volume_Indicator.v"/>
+        <Attr Name="ImportTime" Val="1554455158"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_seg_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/seven_seg_display.v"/>
+        <Attr Name="ImportTime" Val="1553756793"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/theme_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/d_flip_flop.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../lab_4_single_pulse/lab_4_single_pulse.srcs/sources_1/new/d_flip_flop.v"/>
+        <Attr Name="ImportTime" Val="1551942867"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/clock_divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../lab_4_single_pulse/lab_4_single_pulse.srcs/sources_1/new/clock_divider.v"/>
+        <Attr Name="ImportTime" Val="1552372725"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/single_pulse.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../lab_4_single_pulse/lab_4_single_pulse.srcs/sources_1/new/single_pulse.v"/>
+        <Attr Name="ImportTime" Val="1552371209"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Pixel_On_Text.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../VGA-Text-Generator.srcs/sources_1/new/Pixel_On_Text.vhd"/>
+        <Attr Name="ImportTime" Val="1449277103"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/commonPak.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../VGA-Text-Generator.srcs/sources_1/new/commonPak.vhd"/>
+        <Attr Name="ImportTime" Val="1449277103"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Font_Rom.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../VGA-Text-Generator.srcs/sources_1/new/Font_Rom.vhd"/>
+        <Attr Name="ImportTime" Val="1449277103"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Pixel_On_Text2.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../VGA-Text-Generator.srcs/sources_1/new/Pixel_On_Text2.vhd"/>
+        <Attr Name="ImportTime" Val="1449277103"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_text.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mode_changer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/mode_changer.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/game_record_text.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_game_background.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/draw_game_background.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/moving_av_filter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/moving_av_filter.v"/>
+        <Attr Name="ImportTime" Val="1554430876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_div_100kHz.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_100kHz.v"/>
+        <Attr Name="ImportTime" Val="1554429808"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bar_visualization.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/bar_visualization.v"/>
+        <Attr Name="ImportTime" Val="1554452354"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_tick.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/draw_tick.v"/>
+        <Attr Name="ImportTime" Val="1554429808"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_grid.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/draw_grid.v"/>
+        <Attr Name="ImportTime" Val="1554429808"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/frequency_calculator.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/frequency_calculator.v"/>
+        <Attr Name="ImportTime" Val="1554466621"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_div_1hz.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/clock_div_1hz.v"/>
+        <Attr Name="ImportTime" Val="1554451770"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bouncing_balls.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/bouncing_balls.v"/>
+        <Attr Name="ImportTime" Val="1554463695"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_div_bouncing_balls.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Audio_Viz_Project_Template.srcs/sources_1/new/clock_div_bouncing_balls.v"/>
+        <Attr Name="ImportTime" Val="1554452933"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Audio_Viz_Project_Template/archive_project_summary.txt">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../archive_project_summary.txt"/>
+        <Attr Name="ImportTime" Val="1554466666"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ball_waveform.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/ball_waveform.v"/>
+        <Attr Name="ImportTime" Val="1554535418"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ball_background.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/ball_background.v"/>
+        <Attr Name="ImportTime" Val="1554496292"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ball_text.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/ball_text.v"/>
+        <Attr Name="ImportTime" Val="1554542090"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/hill.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/hill.mem"/>
+        <Attr Name="ImportTime" Val="1554484291"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/player.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/player.mem"/>
+        <Attr Name="ImportTime" Val="1554482245"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/noise_cancelling_filter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/noise_cancelling_filter.v"/>
+        <Attr Name="ImportTime" Val="1554560028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/average_amplifier.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/average_amplifier.v"/>
+        <Attr Name="ImportTime" Val="1554557082"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_freq_waveform.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_waveform.v"/>
+        <Attr Name="ImportTime" Val="1554558219"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_freq_text.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/draw_freq_text.v"/>
+        <Attr Name="ImportTime" Val="1554565103"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/my_1525kHz.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/my_1525kHz.v"/>
+        <Attr Name="ImportTime" Val="1554560117"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_div_1525kHz.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_1525kHz.v"/>
+        <Attr Name="ImportTime" Val="1554560208"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FLICKER_ANODE.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/FLICKER_ANODE.v"/>
+        <Attr Name="ImportTime" Val="1554560271"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SEGMENT_DISP.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Audio_Viz_Project_Template.srcs/sources_1/new/SEGMENT_DISP.v"/>
+        <Attr Name="ImportTime" Val="1554560302"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Voice_Scope_TOP"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../EE2026 AY18-19 SEM1/Project/ForStudents/Voice_Scope_Project_Template.xpr/Voice_Scope_Project_Template/Voice_Scope_Project_Template.srcs/constrs_1/new/Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1537964798"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

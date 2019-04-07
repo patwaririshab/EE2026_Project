@@ -1,0 +1,169 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+* Section (5) - CONFIGURATION SETTINGS/FILES
+*  This section summarizes the configuration settings/files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = Audio_Viz_Project_Template
+Directory = C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = 
+
+Section (2) - INCLUDED RUNS
+---------------------------
+The run results were included for the following runs in the archived project:-
+
+<synth_1>
+<impl_1>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+<sources_1>
+C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/archive_project_summary.txt
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_CONTROL.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/CLK_108M.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/VOICE_CAPTURER.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/VGA_DISPLAY.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Waveform.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/Draw_Background.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/Voice_Scope_TOP.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/Voice_Scope_Project_Template/archive_project_summary.txt
+./Audio_Viz_Project_Template.srcs/sources_1/imports/Audio_Viz_Project_Template/archive_project_summary.txt
+./Audio_Viz_Project_Template.srcs/sources_1/new/clk_div.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/TestWave_Gen.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/Volume_Indicator.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/seven_seg_display.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/theme_selector.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/d_flip_flop.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/clock_divider.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/single_pulse.v
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/wrapper.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/commonPak.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/Font_Rom.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/imports/new/Pixel_On_Text2.vhd
+./Audio_Viz_Project_Template.srcs/sources_1/new/draw_text.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/mode_changer.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/game_record_text.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/draw_game_background.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/moving_av_filter.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/clk_div_100kHz.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/bar_visualization.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/draw_tick.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/draw_grid.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/frequency_calculator.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/clock_div_1hz.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/bouncing_balls.v
+./Audio_Viz_Project_Template.srcs/sources_1/new/clock_div_bouncing_balls.v
+
+<constrs_1>
+./Audio_Viz_Project_Template.srcs/constrs_1/imports/new/Basys3_Master.xdc
+
+<sim_1>
+./Audio_Viz_Project_Template.srcs/sim_1/new/max_finder_simul.v
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/vivado.jou
+Archived Location = ./Audio_Viz_Project_Template/vivado.jou
+
+Source File = C:/Users/patwa/Desktop/EE2026_Project/Audio_Viz_Project_Template/vivado.log
+Archived Location = ./Audio_Viz_Project_Template/vivado.log
+
+Section (5) - CONFIGURATION SETTINGS/FILES
+------------------------------------------
+List of configuration settings/files that were added to the archived project:-
+
+
