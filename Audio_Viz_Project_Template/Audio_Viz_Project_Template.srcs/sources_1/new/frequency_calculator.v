@@ -34,7 +34,7 @@ module frequency_calculator(
    reg[15:0] max_amplitude = 0;
    reg[15:0] min_amplitude = 2048;
    reg[11:0] one_second_record[0:10000];
-   reg[15:0] time_counter = 0; //If time_counter == 10000, termination condition (0.1 second completed)
+    reg[15:0] time_counter = 0; //If time_counter == 10000, termination condition (0.5 second completed)
    reg ender = 0;
    reg [15:0] max_counter = 0;
    reg [15:0] min_counter = 0;
@@ -60,7 +60,8 @@ module frequency_calculator(
    
    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
-        //This block counts the number of peaks and troughs in 0.1 second and gets their average, then x 10 to get Frequency
+        //This block counts the number of peaks and troughs in 0.5 second 
+        //The frequency (number_peaks/troughs in 1 s)= 2*(number_peaks + number_troughs)/2 = (number_peaks + number_troughs)
         //This block iterates thorugh the recorded sample and compares adjacent elements to determine peak and trough
          if (ender == 1) begin
             i <= i + 1;
