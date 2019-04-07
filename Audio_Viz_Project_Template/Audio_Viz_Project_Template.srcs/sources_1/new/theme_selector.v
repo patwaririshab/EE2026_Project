@@ -24,6 +24,7 @@ module theme_selector(
         input button_clock,
         input left_button_out,
         input right_button_out,
+        // Registers below contain the concatenated data of the colour for each feature.
         output reg [11:0] cur_theme_wave,
         output reg [11:0] cur_theme_axes,
         output reg [11:0] cur_theme_grid,
@@ -32,7 +33,9 @@ module theme_selector(
         input [1:0] mode
     );
     
+    // reg array used to temporarily store colours.
     reg [11:0] cur_theme[0:4];
+    // Counter below used to cycle through the different themes.
     reg [2:0] theme_counter = 0; // This value goes from 0 to a max of 4.
     
     always @ (posedge button_clock) begin
@@ -44,9 +47,13 @@ module theme_selector(
                 theme_counter = theme_counter + 1;
             end
             
+            // Conditional to handle unwanted overflow, since we are only using
+            // 5 integers out of the available 8 integers in 3 bits.
             if (theme_counter == 5) theme_counter = 0;
             if (theme_counter == 7) theme_counter = 4;
             
+            // Switch statement below assigns colours to corresponding bits in the
+            //  cur_theme array.
             case (theme_counter)
                 0: begin //Default
                     // Wave
@@ -160,6 +167,8 @@ module theme_selector(
                 end
             endcase
             
+            // Each component is then set to the appropriate element in the
+            // cur_theme array.
             cur_theme_wave = cur_theme[0];
             cur_theme_axes = cur_theme[1];
             cur_theme_grid = cur_theme[2];
