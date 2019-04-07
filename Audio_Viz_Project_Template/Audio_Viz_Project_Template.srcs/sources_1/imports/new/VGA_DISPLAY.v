@@ -58,14 +58,15 @@ module VGA_DISPLAY(
     );
     
     // COMBINE ALL OUTPUTS ON EACH CHANNEL
-    wire [3:0] VGA_RED_CHAN = VGA_mode_selector[4] ? VGA_mode_selector[3:0]
-        : (mode == 0) ?
-            (VGA_mode_one_text[4] ? VGA_mode_one_text[3:0]
-            : VGA_mode_one_waveform[4] ? VGA_mode_one_waveform[3:0]
-            : VGA_mode_one_tick[4] ? VGA_mode_one_tick[3:0]
+    // The displayed mode layer is always displayed, hence it is always on top.
+    wire [3:0] VGA_RED_CHAN = VGA_mode_selector[4] ? VGA_mode_selector[3:0] 
+    : (mode == 0) ? // This checks the current mode that the user is in
+    (VGA_mode_one_text[4] ? VGA_mode_one_text[3:0] // First part of each line checks if layer is being used
+            : VGA_mode_one_waveform[4] ? VGA_mode_one_waveform[3:0] // If not, next layer is checked in the same way 
+            : VGA_mode_one_tick[4] ? VGA_mode_one_tick[3:0] // If yes, the 4-bit colour is set.
             : VGA_mode_one_grid[4] ? VGA_mode_one_grid[3:0]
-            : VGA_mode_one_back[3:0])
-        : (mode == 1) ?
+     : VGA_mode_one_back[3:0]) // If all layers are not being used, black background is displayed.
+    : (mode == 1) ? // Game layers are different from the other modes' layers
             (VGA_game_end_text[4] ? VGA_game_end_text[3:0]
             : VGA_game_text[4] ? VGA_game_text[3:0]
             : VGA_game_player[4] ? VGA_game_player[3:0]
@@ -81,7 +82,9 @@ module VGA_DISPLAY(
             : VGA_ball_colour[4] ? VGA_ball_colour[3:0]
             : VGA_ball_waveform[4] ? VGA_ball_waveform[3:0]
             : VGA_ball_back[3:0]);
-            
+    // Same process as above is done for the remaining channels as well
+    
+    
     wire [3:0] VGA_GREEN_CHAN = VGA_mode_selector[9] ? VGA_mode_selector[8:5]
         : (mode == 0) ?
             (VGA_mode_one_text[9] ? VGA_mode_one_text[8:5]
