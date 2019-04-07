@@ -194,6 +194,7 @@ module draw_game(
     wire player_condition = (VGA_HORZ_COORD >= player_horz_lower && VGA_HORZ_COORD < player_horz_upper) &&
         (VGA_VERT_COORD >= player_vert_lower && VGA_VERT_COORD < player_vert_upper); 
     always @ (posedge CLK_VGA) begin
+        // Setting start positon of bird upon restart.
         if (restart == 1) begin
            player_horz_lower = 5;
            player_horz_upper = 35;
@@ -204,6 +205,7 @@ module draw_game(
            HP = 1265;
         end
         else if (mode == 1 && game_running == 1 && (game_over == 0 && game_won == 0)) begin
+            // Performing the jump for a short period of about 0.5 seconds.
             if (jumped == 1) begin
                 if (jump_counter[23] == 1) begin
                     jumped = 0;
@@ -212,6 +214,8 @@ module draw_game(
                 jump_counter = jump_counter + 1;
             end
             else if (cur_volume >= 256 && jumped == 0) begin
+            // 255 corresponds to 000011111111 pattern for the led register. This means that
+            // a jump is performed when the sound is above the volume level 8.
                 jumped = 1; 
             end
             
