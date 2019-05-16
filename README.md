@@ -3,7 +3,8 @@ FPGA audio visualiser consisting of an FPGA rendition of flappy bird game, frequ
 Coded in Verilog for the Basys3 FPGA. Uses a modmic 3 for audio input and the VGA output pins for video display.
 
 Project Contributors:
-Patwari Rishab (@patwaririshab)\n
+Patwari Rishab (@patwaririshab)
+
 Raghav Bhardwaj (@Raghav-B)
 
 Features:
